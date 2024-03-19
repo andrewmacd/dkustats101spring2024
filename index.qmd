@@ -8,11 +8,11 @@ knitr::opts_chunk$set(echo = TRUE)
 
 # Course at a glance
 
--   Tuesday/Thursday class at 2:45-5:15 pm in IB3106
--   Wednesday lab 8:10-9:10 pm 
+-   Monday/Wednesday class at 12:00 pm to 2:30 pm in AB1079
+-   Tuesday lab 6:00 pm to 7:15 pm in AB1079
 -   Office hours -
-    -   Tuesday, Thursday 1:00-2:30 pm China time in CC2064
--   Pre-class warmup quiz due at 2:30 pm before each class
+    -   Monday, Wednesday 2:45 pm to 4:00 pm in WDR 3114
+    -   Tuesday, Thursday 1:00 pm to 2:15 pm in WDR 3114
 -   Homeworks are all due on Sunday at 11:59 pm
 -   All other announcements and information are posted on the class Teams site
 
@@ -57,22 +57,21 @@ Because of the pandemic situation this term, the course structure is going to be
 
 *In general*, each week will proceed roughly as follows:
 
--   Monday-Thursday: Read the textbook chapter, do the Sakai quiz online, make progress on the lab(s) and homework
--   **Tuesday 2:45 pm-5:15 pm**: Class session with a conceptual review of the chapter material 
--   **Wednesday 8:10 pm-9:10 pm**: Lab activities designed to help gain familiarity with the technical aspects of using R, RStudio and Quarto.
--   **Thursday 2:45 pm-5:15 pm**: Second weekly class session
+-   Monday-Thursday: Read the textbook chapter, make progress on the lab(s) and homework
+-   **Monday 12:00 pm-2:30 pm**: Class session with a conceptual review of the chapter material
+-   **Tuesday 6:00 pm-7:15 pm**: Lab activities designed to help gain familiarity with the technical aspects of using R, RStudio and Quarto.
+-   **Wednesday 12:00 pm-2:30 pm**: Second weekly class session
 -   Friday: Complete DataCamp lab(s) before **midnight**
 -   Sunday: Complete the homework that is due before **midnight** on Sunday
 
 # How to prepare
 
-We will be using four different online tools for this class, you will need to sign up for two of these tools. Our main class hub will be on Teams, where I will provide appropriate links for when you need to use the other tools.
+We will be using three different online tools for this class, you will need to sign up for two of these tools. Our main class hub will be on Teams, where I will provide appropriate links for when you need to use the other tools.
 
 1.  [Teams](https://www.microsoft.com/en/microsoft-teams/download-app): Teams works a bit like WeChat and a bit like Sakai and is perfect for collaboration. I encourage you to post often on Teams, including interesting statistical things you find in the world, questions about statistics you see in the news, and any other thoughts you have. Make sure to fill out your profile and upload a profile picture so we can keep track of who you are!
 2.  [R and RStudio](https://www.datacamp.com/community/tutorials/installing-R-windows-mac-ubuntu): These software packages that implement the R statistical programming language are free and very popular tools for conducting statistical investigations, including all of the homeworks for this class.
     -   [Quarto](https://quarto.org/docs/computations/r.html): Quarto is a flexible document formatting standard that allows you to create nice looking documents that easily mix text and R code output (I made this website with Quarto - you can view the code [here](https://github.com/andrewmacd/dkustats101spring2023)). All your homeworks, midterm, and final projects will be written inside of Quarto documents. Instructions on how to use the Quarto syntax will be provided with the first homework assignment.
 3.  [DataCamp](https://www.datacamp.com/groups/shared_links/a40dc37b1900d6e180e78f1d74b27a320e0544f29a010932ff5034e06836eed0): DataCamp has a lot of very useful tutorials that will help you learn how to code in R.
-4.  [Sakai](https://sakai.duke.edu/x/HLm7ZR): Sakai will only be used to take quizzes. All other course information will be hosted on our Teams site.
 
 # Required texts
 
@@ -84,11 +83,11 @@ I will detail the policy for this course below. Basically, try to learn stuff, d
 
 ## Assessment
 
--   Pre-class warmup quiz **10%**: Before each class session there will be a series of short online questions to prepare you for the day's material. Completing them before class is mandatory. I will drop your two lowest quiz grades.
+-   Beginning of class warmup quiz **10%**: At the start of each class session there will be a series of short online questions to start discussion of the class material. I will drop your two lowest quiz grades.
 
--   Homework **40%**: At the end of a group of content, a homework will be assigned that will ask you to analyze a dataset and answer questions related to that concept group. These homeworks are always due the Sunday after assigned at 11:59 pm China time. Each homework/midterm will also have a best graph contest, where the person whose classmates vote as having the best graph wins some extra credit points.
+-   Homework **50%**: At the end of a group of content, a homework will be assigned that will ask you to analyze a dataset and answer questions related to that concept group. These homeworks are always due the Sunday after assigned at 11:59 pm China time. Each homework/midterm will also have a best graph contest, where the person whose classmates vote as having the best graph wins some extra credit points.
 
--   Homework checks **5%**: To make sure you are making good progress on your homework, the Sunday before the homework is due (except for the first homework) you will be required to submit your progress on the homework so far. You are required to have tried to have answered all the questions covered by the lectures and textbook up to that Sunday. I will not check your answers but rather check to see if you have made a good effort to answer all the questions derived from the material already covered. If you have a reasonable answer for each question checked you will get full points. If you have not made an effort to answer all the questions reviewed you will get a zero.
+-   Homework checks **4%**: To make sure you are making good progress on your homework, the Sunday before the homework is due (except for the first homework) you will be required to submit your progress on the homework so far. You are required to have tried to have answered all the questions covered by the lectures and textbook up to that Sunday. I will not check your answers but rather check to see if you have made a good effort to answer all the questions derived from the material already covered. If you have a reasonable answer for each question checked you will get full points. If you have not made an effort to answer all the questions reviewed you will get a zero.
 
 -   Unit 4 homework - paper analysis **5%**: At the end of Unit 4, you will select a news article and then do some research on the underlying statistics presented in the news article, critiquing if the news article accurately represented the study reference in the article.
 
@@ -96,7 +95,9 @@ I will detail the policy for this course below. Basically, try to learn stuff, d
 
 -   Data Camp labs **5%**: A number of labs on the website Data Camp will be assigned to you; these labs are pass/fail and you will receive full credit if you complete each of the labs by the specified due date.
 
--   Participation **10%**: As discussed in [the attendance policy section](#attendance-policy), class attendance is important. So is participating in the discussions on Teams. If you attend all the course meetings but do not actively participate on Teams, you can expect a B/B+ participation grade. Receiving an A grade for participation requires that you come to every class and actively participate in Teams (help other students, ask questions, comment on other's posts and so on).
+-   Syllabus quiz **1%**: A short quiz after the first class regarding the course requirements.
+
+-     Extra credit **Maximum 3%**: You have several opportunities to earn extra credit. There will be three graph contests, whereby the student who is voted by the other students as having the best graph will receive extra credit points. Additionally, those who respond to other students questions on Teams will also be eligible to earn extra credit points.
 
 ## Lateness policy
 
@@ -108,11 +109,11 @@ Since the course moves very quickly, if you are submitting work late that means 
 -   If it is later than 11:59:00 pm the next day, the assignment will be assessed a 50% lateness penalty
 -   If it is later than 2 days from the due date, I will no longer accept the assignment
 
-> Please be sure to check that your homework is complete and make sure to submit it a few minutes early. You can submit multiple times on Sakai so make sure you have a nearly complete version uploaded even if you want to keep working on it right up to the deadline. I will not be sympathetic to messages that complain of computer problems when you are trying to submit for the first time at 11:58:51 pm.
+> Please be sure to check that your homework is complete and make sure to submit it a few minutes early. You can submit multiple times on Teams so make sure you have a nearly complete version uploaded even if you want to keep working on it right up to the deadline. I will not be sympathetic to messages that complain of computer problems when you are trying to submit for the first time at 11:58:51 pm.
 
 ## Attendance Policy {#attendance-policy}
 
-I enjoy randomly calling on students during class, so I recommend you come to class and be prepared as you could be the lucky winner that is called on in any given class section! The lecture will have a number of points on which I will ask students to modify some code and return a result and doing these exercises is mandatory. If you are called on but not attending the lecture without previously notifying me, it will count as an absence and seriously affect your participation grade.
+Class will be highly interactive and therefore it is to your advantage to attend class. I do not take roll but if you are not in class for the beginning of class quiz there is no opportunity to make it up without a valid excused absence (doctor's note, absence arranged in advance, etc.). The lecture will have a number of points on which I will ask students to modify some code and return a result and doing these exercises is mandatory. If you are called on to provide your solution but are not attending the lecture without previously notifying me, it will also be quite embarrassing for you!
 
 ## Contact Policy
 
