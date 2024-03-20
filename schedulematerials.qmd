@@ -162,7 +162,7 @@ Topics covered:
 
 -   Lecture activity: [Lecture 2.4 activity]
 
-## Lab 2.2: Interpreting Coefficients (Tuesday, April 9)
+## Lab 2.2: Interpreting coefficients (Tuesday, April 9)
 
 -   Lab files: [Lab 2.2]
     -   Make sure to extract (unzip) the lab files before attempting to modify them!
@@ -177,7 +177,7 @@ Topics covered:
 
 # Unit 3: Measuring uncertainty
 
-## Lecture 3.1: Confidence intervals - poroportions (Wednesday, April 10)
+## Lecture 3.1: Confidence intervals - proportions (Wednesday, April 10)
 
 Reading to do before class: Chapter 13
 
@@ -290,8 +290,6 @@ Topics covered:
 
 Reading to do before class: Chapter 20
 
-> Preclass quiz due at 2:30 pm China time
-
 Topics covered:
 
 -   Regression inference and intuition
@@ -304,7 +302,7 @@ Topics covered:
 
 -   Lecture activity: [Lecture 4.2 activity]
 
-## Lab 4.1: Model builing (Tueday, April 30)
+## Lab 4.1: Model building (Tueday, April 30)
 
 -   Lab files: [Lab 3.2]
 

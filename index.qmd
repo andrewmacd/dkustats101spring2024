@@ -71,11 +71,11 @@ We will be using three different online tools for this class, you will need to s
 1.  [Teams](https://www.microsoft.com/en/microsoft-teams/download-app): Teams works a bit like WeChat and a bit like Sakai and is perfect for collaboration. I encourage you to post often on Teams, including interesting statistical things you find in the world, questions about statistics you see in the news, and any other thoughts you have. Make sure to fill out your profile and upload a profile picture so we can keep track of who you are!
 2.  [R and RStudio](https://www.datacamp.com/community/tutorials/installing-R-windows-mac-ubuntu): These software packages that implement the R statistical programming language are free and very popular tools for conducting statistical investigations, including all of the homeworks for this class.
     -   [Quarto](https://quarto.org/docs/computations/r.html): Quarto is a flexible document formatting standard that allows you to create nice looking documents that easily mix text and R code output (I made this website with Quarto - you can view the code [here](https://github.com/andrewmacd/dkustats101spring2023)). All your homeworks, midterm, and final projects will be written inside of Quarto documents. Instructions on how to use the Quarto syntax will be provided with the first homework assignment.
-3.  [DataCamp](https://www.datacamp.com/groups/shared_links/a40dc37b1900d6e180e78f1d74b27a320e0544f29a010932ff5034e06836eed0): DataCamp has a lot of very useful tutorials that will help you learn how to code in R.
+3.  [DataCamp](https://www.datacamp.com/groups/stats-101-5f35cd3d-9ec2-4341-bfdf-855dcc9a397f/shared_links/6360308e1f54e3c2c4c97b85756568a7f6557d8560ab89da0742bfba3839bdaf): DataCamp has a lot of very useful tutorials that will help you learn how to code in R.
 
 # Required texts
 
-
+Intro Stats, 6th Edition by De Veaux et. al.
 
 # Course policies
 
@@ -97,7 +97,7 @@ I will detail the policy for this course below. Basically, try to learn stuff, d
 
 -   Syllabus quiz **1%**: A short quiz after the first class regarding the course requirements.
 
--     Extra credit **Maximum 3%**: You have several opportunities to earn extra credit. There will be three graph contests, whereby the student who is voted by the other students as having the best graph will receive extra credit points. Additionally, those who respond to other students questions on Teams will also be eligible to earn extra credit points.
+-   Extra credit **maximum 3%**: You have several opportunities to earn extra credit. There will be three graph contests, whereby the student who is voted by the other students as having the best graph will receive extra credit points. Additionally, those who respond to other students questions on Teams will also be eligible to earn extra credit points.
 
 ## Lateness policy
 
@@ -122,6 +122,10 @@ Class will be highly interactive and therefore it is to your advantage to attend
 3.  Do not DM me 2 hours before a homework is due and expect an immediate response!
 4.  For general questions, such as how should one interpret a question on a homework or quiz, you should ask the question in the appropriate Teams channel. That way others can benefit from the response or someone else may be able to answer more quickly than I can. If you DM me a question that really belongs in the help channel I will ask you to repost it.
 5.  Many questions can be answered by carefully checking the class website or reviewing the materials in the Teams chat. If in doubt, though, feel free to ask.
+
+## ChatGPT (and similar) Policy
+
+Unless otherwise specified on an assignment, you may use ChatGPT to your heart's content. However, most of the assignments in this class are not very amenable to ChatGPT help. Your main grade will be understanding, annotating, and interpreting your output. Producing the output is the very simple minimal requirement. Also, ChatGPT often makes many coding mistakes. If you rely too much on ChatGPT to code, you will not understand when it makes mistakes and why it makes mistakes. 
 
 ## Academic Dishonesty Policy
 
