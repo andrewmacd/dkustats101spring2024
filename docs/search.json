@@ -7,249 +7,256 @@
     "text": "Important: class schedule is subject to change, contingent on mitigating circumstances and the progress we make as a class. If there are any changes, I will announce them on the Teams site."
   },
   {
-    "objectID": "schedulematerials.html#lecture-1.1-class-welcome-wednesday-march-22",
-    "href": "schedulematerials.html#lecture-1.1-class-welcome-wednesday-march-22",
+    "objectID": "schedulematerials.html#lecture-1.1-class-welcome-wednesday-march-20",
+    "href": "schedulematerials.html#lecture-1.1-class-welcome-wednesday-march-20",
     "title": "Course Schedule and Class Materials",
-    "section": "Lecture 1.1: Class welcome (Wednesday, March 22)",
-    "text": "Lecture 1.1: Class welcome (Wednesday, March 22)\nReading to do before class: Chapter 1, 2.1 and 2.2, and 3\nTopics covered:\n\nWhat are data and variables?\nHow to display quantitative and qualitative variables\nContingency tables"
+    "section": "Lecture 1.1: Class welcome (Wednesday, March 20)",
+    "text": "Lecture 1.1: Class welcome (Wednesday, March 20)\nReading to do before class: Chapter 1, 2.1 and 2.2, and 3\nTopics covered:\n\nWhat are data and variables?\nHow to display quantitative and qualitative variables\nContingency tables"
   },
   {
-    "objectID": "schedulematerials.html#lecture-1.2-characteristics-of-distributions-thursday-march-23",
-    "href": "schedulematerials.html#lecture-1.2-characteristics-of-distributions-thursday-march-23",
+    "objectID": "schedulematerials.html#lab-1.1-r-and-quarto-familiarization-thursday-march-21",
+    "href": "schedulematerials.html#lab-1.1-r-and-quarto-familiarization-thursday-march-21",
     "title": "Course Schedule and Class Materials",
-    "section": "Lecture 1.2: Characteristics of distributions (Thursday, March 23)",
-    "text": "Lecture 1.2: Characteristics of distributions (Thursday, March 23)\nReading to do before class: Chapter 2.3-5 and 4\n\nPreclass quiz due at 2:30 pm\n\nTopics covered:\n\nHow to describe the shape, center, and spread of a distribution\nHow to compare distributions\nDealing with problem distributions (outliers, reexpression)\nLecture webpage: Lecture 1.2\nLecture activity: Lecture 1.2 activity\nQuality YouTube content: Tidyverse music video"
+    "section": "Lab 1.1: R and Quarto familiarization (Thursday, March 21)",
+    "text": "Lab 1.1: R and Quarto familiarization (Thursday, March 21)\n\nLab files: [Lab 1.1]\n\nMake sure to extract (unzip) the lab files before attempting to modify them!"
   },
   {
-    "objectID": "schedulematerials.html#online-lab-1.1-due-sunday-march-26-at-115900-pm",
-    "href": "schedulematerials.html#online-lab-1.1-due-sunday-march-26-at-115900-pm",
+    "objectID": "schedulematerials.html#lecture-1.2-characteristics-of-distributions-friday-march-22",
+    "href": "schedulematerials.html#lecture-1.2-characteristics-of-distributions-friday-march-22",
     "title": "Course Schedule and Class Materials",
-    "section": "Online lab 1.1 (due Sunday, March 26 at 11:59:00 pm)",
-    "text": "Online lab 1.1 (due Sunday, March 26 at 11:59:00 pm)\n\nIntroduction to R\nIntroduction to the Tidyverse"
+    "section": "Lecture 1.2: Characteristics of distributions (Friday, March 22)",
+    "text": "Lecture 1.2: Characteristics of distributions (Friday, March 22)\nReading to do before class: Chapter 2.3-5 and 4\nTopics covered:\n\nHow to describe the shape, center, and spread of a distribution\nHow to compare distributions\nDealing with problem distributions (outliers, reexpression)\nLecture webpage:\nLecture activity:\nQuality YouTube content: Tidyverse music video"
   },
   {
-    "objectID": "schedulematerials.html#lab-1.1-r-and-quarto-familiarization-monday-march-27",
-    "href": "schedulematerials.html#lab-1.1-r-and-quarto-familiarization-monday-march-27",
+    "objectID": "schedulematerials.html#online-lab-1.1-due-sunday-march-24-at-115900-pm",
+    "href": "schedulematerials.html#online-lab-1.1-due-sunday-march-24-at-115900-pm",
     "title": "Course Schedule and Class Materials",
-    "section": "Lab 1.1: R and Quarto familiarization (Monday, March 27)",
-    "text": "Lab 1.1: R and Quarto familiarization (Monday, March 27)\n\nLab files: Lab 1.1\n\nMake sure to extract (unzip) the lab files before attempting to modify them!"
+    "section": "Online lab 1.1 (due Sunday, March 24 at 11:59:00 pm)",
+    "text": "Online lab 1.1 (due Sunday, March 24 at 11:59:00 pm)\n\nIntroduction to R\nIntroduction to the Tidyverse"
   },
   {
-    "objectID": "schedulematerials.html#lecture-1.3-comparing-distributions-and-the-normal-distribution-tuesday-march-28",
-    "href": "schedulematerials.html#lecture-1.3-comparing-distributions-and-the-normal-distribution-tuesday-march-28",
+    "objectID": "schedulematerials.html#lecture-1.3-comparing-distributions-and-the-normal-distribution-monday-march-25",
+    "href": "schedulematerials.html#lecture-1.3-comparing-distributions-and-the-normal-distribution-monday-march-25",
     "title": "Course Schedule and Class Materials",
-    "section": "Lecture 1.3: Comparing distributions and the Normal distribution (Tuesday, March 28)",
-    "text": "Lecture 1.3: Comparing distributions and the Normal distribution (Tuesday, March 28)\nReading to do before class: Chapter 5\n\nPreclass quiz due at 2:30 pm\n\nTopics covered:\n\nStandard deviation and standardizing values\nNormal models\nNormal percentiles\nLecture webpage: Lecture 1.3\nLecture activity: Lecture 1.3 activity"
+    "section": "Lecture 1.3: Comparing distributions and the Normal distribution (Monday, March 25)",
+    "text": "Lecture 1.3: Comparing distributions and the Normal distribution (Monday, March 25)\nReading to do before class: Chapter 5\nTopics covered:\n\nStandard deviation and standardizing values\nNormal models\nNormal percentiles\nLecture webpage: [Lecture 1.3]\nLecture activity: [Lecture 1.3 activity]"
   },
   {
-    "objectID": "schedulematerials.html#lab-1.2-advanced-quarto-editing-wednesday-march-29",
-    "href": "schedulematerials.html#lab-1.2-advanced-quarto-editing-wednesday-march-29",
+    "objectID": "schedulematerials.html#lab-1.2-advanced-quarto-editing-tuesday-march-26",
+    "href": "schedulematerials.html#lab-1.2-advanced-quarto-editing-tuesday-march-26",
     "title": "Course Schedule and Class Materials",
-    "section": "Lab 1.2: Advanced Quarto editing (Wednesday, March 29)",
-    "text": "Lab 1.2: Advanced Quarto editing (Wednesday, March 29)\n\nLab files: Lab 1.2\n\nMake sure to extract (unzip) the lab files before attempting to modify them!"
+    "section": "Lab 1.2: Advanced Quarto editing (Tuesday, March 26)",
+    "text": "Lab 1.2: Advanced Quarto editing (Tuesday, March 26)\n\nLab files: [Lab 1.2]\n\nMake sure to extract (unzip) the lab files before attempting to modify them!"
   },
   {
-    "objectID": "schedulematerials.html#unit-1-homework-due-april-2nd-at-235900-pm",
-    "href": "schedulematerials.html#unit-1-homework-due-april-2nd-at-235900-pm",
+    "objectID": "schedulematerials.html#unit-1-homework-due-march-31-at-235900-pm",
+    "href": "schedulematerials.html#unit-1-homework-due-march-31-at-235900-pm",
     "title": "Course Schedule and Class Materials",
-    "section": "Unit 1 homework (due April 2nd at 23:59:00 pm)",
-    "text": "Unit 1 homework (due April 2nd at 23:59:00 pm)\n\nHomework files: Unit 1 homework instructions"
+    "section": "Unit 1 homework (due March 31 at 23:59:00 pm)",
+    "text": "Unit 1 homework (due March 31 at 23:59:00 pm)\n\nHomework files: [Unit 1 homework instructions]"
   },
   {
-    "objectID": "schedulematerials.html#lecture-2.1-association-and-correlation-thursday-march-30",
-    "href": "schedulematerials.html#lecture-2.1-association-and-correlation-thursday-march-30",
+    "objectID": "schedulematerials.html#lecture-2.1-association-and-correlation-wednesday-march-27",
+    "href": "schedulematerials.html#lecture-2.1-association-and-correlation-wednesday-march-27",
     "title": "Course Schedule and Class Materials",
-    "section": "Lecture 2.1: Association and correlation (Thursday, March 30)",
-    "text": "Lecture 2.1: Association and correlation (Thursday, March 30)\nReading to do before class: Chapter 6\n\nPreclass quiz due at 2:30 pm\n\nTopics covered:\n\nScatterplots\nCorrelations\nDoes correlation imply causation?\nLecture webpage: Lecture 2.1\nLecture activity: Lecture 2.1 activity"
+    "section": "Lecture 2.1: Association and correlation (Wednesday, March 27)",
+    "text": "Lecture 2.1: Association and correlation (Wednesday, March 27)\nReading to do before class: Chapter 6\nTopics covered:\n\nScatterplots\nCorrelations\nDoes correlation imply causation?\nLecture webpage: [Lecture 2.1]\nLecture activity: [Lecture 2.1 activity]"
   },
   {
-    "objectID": "schedulematerials.html#online-lab-2.1-due-on-friday-march-31-at-235900",
-    "href": "schedulematerials.html#online-lab-2.1-due-on-friday-march-31-at-235900",
+    "objectID": "schedulematerials.html#online-lab-2.1-due-on-friday-march-29-at-235900",
+    "href": "schedulematerials.html#online-lab-2.1-due-on-friday-march-29-at-235900",
     "title": "Course Schedule and Class Materials",
-    "section": "Online lab 2.1 (due on Friday, March 31 at 23:59:00)",
-    "text": "Online lab 2.1 (due on Friday, March 31 at 23:59:00)\n\nIntroduction to Data Visualization with ggplot2"
+    "section": "Online lab 2.1 (due on Friday, March 29 at 23:59:00)",
+    "text": "Online lab 2.1 (due on Friday, March 29 at 23:59:00)\n\nIntroduction to Data Visualization with ggplot2"
   },
   {
-    "objectID": "schedulematerials.html#lecture-2.2-simple-linear-regression-tuesday-april-4",
-    "href": "schedulematerials.html#lecture-2.2-simple-linear-regression-tuesday-april-4",
+    "objectID": "schedulematerials.html#lecture-2.2-simple-linear-regression-monday-april-1",
+    "href": "schedulematerials.html#lecture-2.2-simple-linear-regression-monday-april-1",
     "title": "Course Schedule and Class Materials",
-    "section": "Lecture 2.2: Simple Linear Regression (Tuesday, April 4)",
-    "text": "Lecture 2.2: Simple Linear Regression (Tuesday, April 4)\nReading to do before class: Chapter 7\n\nPreclass quiz due at 2:30 pm\n\nTopics covered:\n\nLine of best fit: least squares\nThe linear model\nWhat are residuals\nRegression assumptions\nLecture webpage: Lecture 2.2\nLecture activity: Lecture 2.2 activity"
+    "section": "Lecture 2.2: Simple Linear Regression (Monday, April 1)",
+    "text": "Lecture 2.2: Simple Linear Regression (Monday, April 1)\nReading to do before class: Chapter 7\nTopics covered:\n\nLine of best fit: least squares\nThe linear model\nWhat are residuals\nRegression assumptions\nLecture webpage: [Lecture 2.2]\nLecture activity: [Lecture 2.2 activity]"
   },
   {
-    "objectID": "schedulematerials.html#lab-2.1-working-with-regressions-thursday-april-6",
-    "href": "schedulematerials.html#lab-2.1-working-with-regressions-thursday-april-6",
+    "objectID": "schedulematerials.html#lab-2.1-working-with-regressions-tuesday-april-2",
+    "href": "schedulematerials.html#lab-2.1-working-with-regressions-tuesday-april-2",
     "title": "Course Schedule and Class Materials",
-    "section": "Lab 2.1: Working with regressions (Thursday, April 6)",
-    "text": "Lab 2.1: Working with regressions (Thursday, April 6)\n\nLab files: Lab 2.1\n\nMake sure to extract (unzip) the lab files before attempting to modify them!"
+    "section": "Lab 2.1: Working with regressions (Tuesday, April 2)",
+    "text": "Lab 2.1: Working with regressions (Tuesday, April 2)\n\nLab files: [Lab 2.1]\n\nMake sure to extract (unzip) the lab files before attempting to modify them!"
   },
   {
-    "objectID": "schedulematerials.html#lecture-2.3-regression-wisdom-friday-april-7",
-    "href": "schedulematerials.html#lecture-2.3-regression-wisdom-friday-april-7",
+    "objectID": "schedulematerials.html#lecture-2.3-regression-wisdom-wednesday-april-3",
+    "href": "schedulematerials.html#lecture-2.3-regression-wisdom-wednesday-april-3",
     "title": "Course Schedule and Class Materials",
-    "section": "Lecture 2.3: Regression Wisdom (Friday, April 7)",
-    "text": "Lecture 2.3: Regression Wisdom (Friday, April 7)\nReading to do before class: Chapter 8\n\nPreclass quiz due at 2:30 pm China time China time\n\nTopics covered:\n\nBeware extrapolation\nOutliers and leverage\nLurking variables\nStraightening scatterplots\nLecture webpage: Lecture 2.3\nLecture activity: Lecture 2.3 activity"
+    "section": "Lecture 2.3: Regression Wisdom (Wednesday, April 3)",
+    "text": "Lecture 2.3: Regression Wisdom (Wednesday, April 3)\nReading to do before class: Chapter 8\nTopics covered:\n\nBeware extrapolation\nOutliers and leverage\nLurking variables\nStraightening scatterplots\nLecture webpage: [Lecture 2.3]\nLecture activity: [Lecture 2.3 activity]"
   },
   {
-    "objectID": "schedulematerials.html#online-lab-2.2-due-on-friday-april-7-at-235900",
-    "href": "schedulematerials.html#online-lab-2.2-due-on-friday-april-7-at-235900",
+    "objectID": "schedulematerials.html#online-lab-2.2-due-on-friday-april-5-at-235900",
+    "href": "schedulematerials.html#online-lab-2.2-due-on-friday-april-5-at-235900",
     "title": "Course Schedule and Class Materials",
-    "section": "Online lab 2.2 (due on Friday, April 7 at 23:59:00)",
-    "text": "Online lab 2.2 (due on Friday, April 7 at 23:59:00)\n\nWorking with Dates and Times in R"
+    "section": "Online lab 2.2 (due on Friday, April 5 at 23:59:00)",
+    "text": "Online lab 2.2 (due on Friday, April 5 at 23:59:00)\n\nWorking with Dates and Times in R"
   },
   {
-    "objectID": "schedulematerials.html#unit-2-homework---midterm-project---progress-check-due-monday-april-10-at-235900",
-    "href": "schedulematerials.html#unit-2-homework---midterm-project---progress-check-due-monday-april-10-at-235900",
+    "objectID": "schedulematerials.html#unit-2-homework---midterm-project---progress-check-due-sunday-april-7-at-235900",
+    "href": "schedulematerials.html#unit-2-homework---midterm-project---progress-check-due-sunday-april-7-at-235900",
     "title": "Course Schedule and Class Materials",
-    "section": "Unit 2 homework - midterm project - progress check (due Monday, April 10 at 23:59:00)",
-    "text": "Unit 2 homework - midterm project - progress check (due Monday, April 10 at 23:59:00)\n\nHomework files: Unit 2 homework instructions"
+    "section": "Unit 2 homework - midterm project - progress check (due Sunday, April 7 at 23:59:00)",
+    "text": "Unit 2 homework - midterm project - progress check (due Sunday, April 7 at 23:59:00)\n\nHomework files: [Unit 2 homework instructions]"
   },
   {
-    "objectID": "schedulematerials.html#lecture-2.4-multiple-regression-tuesday-april-11",
-    "href": "schedulematerials.html#lecture-2.4-multiple-regression-tuesday-april-11",
+    "objectID": "schedulematerials.html#lecture-2.4-multiple-regression-monday-april-8",
+    "href": "schedulematerials.html#lecture-2.4-multiple-regression-monday-april-8",
     "title": "Course Schedule and Class Materials",
-    "section": "Lecture 2.4: Multiple Regression (Tuesday, April 11)",
-    "text": "Lecture 2.4: Multiple Regression (Tuesday, April 11)\nReading to do before class: Chapter 9\n\nPreclass quiz due at 2:30 pm\n\nTopics covered:\n\nWhat is multiple regression?\nInterpreting multiple regression coefficients\nPartial regression plots\nIndicator variables\nLecture webpage: Lecture 2.4\nLecture activity: Lecture 2.4 activity"
+    "section": "Lecture 2.4: Multiple Regression (Monday, April 8)",
+    "text": "Lecture 2.4: Multiple Regression (Monday, April 8)\nReading to do before class: Chapter 9\nTopics covered:\n\nWhat is multiple regression?\nInterpreting multiple regression coefficients\nPartial regression plots\nIndicator variables\nLecture webpage: [Lecture 2.4]\nLecture activity: [Lecture 2.4 activity]"
   },
   {
-    "objectID": "schedulematerials.html#lab-2.2-interpreting-coefficients-wednesday-april-12",
-    "href": "schedulematerials.html#lab-2.2-interpreting-coefficients-wednesday-april-12",
+    "objectID": "schedulematerials.html#lab-2.2-interpreting-coefficients-tuesday-april-9",
+    "href": "schedulematerials.html#lab-2.2-interpreting-coefficients-tuesday-april-9",
     "title": "Course Schedule and Class Materials",
-    "section": "Lab 2.2: Interpreting Coefficients (Wednesday, April 12)",
-    "text": "Lab 2.2: Interpreting Coefficients (Wednesday, April 12)\n\nLab files: Lab 2.2\n\nMake sure to extract (unzip) the lab files before attempting to modify them!"
+    "section": "Lab 2.2: Interpreting Coefficients (Tuesday, April 9)",
+    "text": "Lab 2.2: Interpreting Coefficients (Tuesday, April 9)\n\nLab files: [Lab 2.2]\n\nMake sure to extract (unzip) the lab files before attempting to modify them!"
   },
   {
-    "objectID": "schedulematerials.html#online-lab-2.3-due-on-friday-april-14-at-115900",
-    "href": "schedulematerials.html#online-lab-2.3-due-on-friday-april-14-at-115900",
+    "objectID": "schedulematerials.html#online-lab-2.3-due-on-friday-april-12-at-115900",
+    "href": "schedulematerials.html#online-lab-2.3-due-on-friday-april-12-at-115900",
     "title": "Course Schedule and Class Materials",
-    "section": "Online lab 2.3 (due on Friday, April 14 at 11:59:00)",
-    "text": "Online lab 2.3 (due on Friday, April 14 at 11:59:00)\n\nIntermediate Data Visualization with ggplot2"
+    "section": "Online lab 2.3 (due on Friday, April 12 at 11:59:00)",
+    "text": "Online lab 2.3 (due on Friday, April 12 at 11:59:00)\n\nIntermediate Data Visualization with ggplot2"
   },
   {
-    "objectID": "schedulematerials.html#unit-2-homework---midterm-project-due-sunday-april-16-at-115900",
-    "href": "schedulematerials.html#unit-2-homework---midterm-project-due-sunday-april-16-at-115900",
+    "objectID": "schedulematerials.html#unit-2-homework---midterm-project-due-sunday-april-14-at-115900",
+    "href": "schedulematerials.html#unit-2-homework---midterm-project-due-sunday-april-14-at-115900",
     "title": "Course Schedule and Class Materials",
-    "section": "Unit 2 homework - midterm project (due Sunday, April 16 at 11:59:00)",
-    "text": "Unit 2 homework - midterm project (due Sunday, April 16 at 11:59:00)\n\nHomework files: Unit 2 homework instructions"
+    "section": "Unit 2 homework - midterm project (due Sunday, April 14 at 11:59:00)",
+    "text": "Unit 2 homework - midterm project (due Sunday, April 14 at 11:59:00)\n\nHomework files: [Unit 2 homework instructions]"
   },
   {
-    "objectID": "schedulematerials.html#lecture-3.1-confidence-intervals---poroportions-thursday-april-13",
-    "href": "schedulematerials.html#lecture-3.1-confidence-intervals---poroportions-thursday-april-13",
+    "objectID": "schedulematerials.html#lecture-3.1-confidence-intervals---poroportions-wednesday-april-10",
+    "href": "schedulematerials.html#lecture-3.1-confidence-intervals---poroportions-wednesday-april-10",
     "title": "Course Schedule and Class Materials",
-    "section": "Lecture 3.1: Confidence intervals - poroportions (Thursday, April 13)",
-    "text": "Lecture 3.1: Confidence intervals - poroportions (Thursday, April 13)\nReading to do before class: Chapter 13\n\nPreclass quiz due at 2:30 pm China time\n\nTopics covered:\n\nWhat is a sampling distribution?\nWhen does the normal model apply?\nConstructing a confidence interval\nInterpreting a confidence interval\nLecture webpage: Lecture 3.1\nLecture activity: Lecture 3.1 activity"
+    "section": "Lecture 3.1: Confidence intervals - poroportions (Wednesday, April 10)",
+    "text": "Lecture 3.1: Confidence intervals - poroportions (Wednesday, April 10)\nReading to do before class: Chapter 13\nTopics covered:\n\nWhat is a sampling distribution?\nWhen does the normal model apply?\nConstructing a confidence interval\nInterpreting a confidence interval\nLecture webpage: [Lecture 3.1]\nLecture activity: [Lecture 3.1 activity]"
   },
   {
-    "objectID": "schedulematerials.html#lecture-3.2-confidence-intervals---means-tuesday-april-18",
-    "href": "schedulematerials.html#lecture-3.2-confidence-intervals---means-tuesday-april-18",
+    "objectID": "schedulematerials.html#lecture-3.2-confidence-intervals---means-monday-april-15",
+    "href": "schedulematerials.html#lecture-3.2-confidence-intervals---means-monday-april-15",
     "title": "Course Schedule and Class Materials",
-    "section": "Lecture 3.2: Confidence intervals - means (Tuesday, April 18)",
-    "text": "Lecture 3.2: Confidence intervals - means (Tuesday, April 18)\nReading to do before class: Chapter 14\n\nPreclass quiz due at 2:30 pm China time\n\nTopics covered:\n\nThe Central Limit Theorem\nConfidence interval for means\nInterpreting a confidence interval\nFinal thoughts on confidence intervals\nLecture webpage: Lecture 3.2\nLecture activity: Lecture 3.2 activity"
+    "section": "Lecture 3.2: Confidence intervals - means (Monday, April 15)",
+    "text": "Lecture 3.2: Confidence intervals - means (Monday, April 15)\nReading to do before class: Chapter 14\nTopics covered:\n\nThe Central Limit Theorem\nConfidence interval for means\nInterpreting a confidence interval\nFinal thoughts on confidence intervals\nLecture webpage: [Lecture 3.2]\nLecture activity: [Lecture 3.2 activity]"
   },
   {
-    "objectID": "schedulematerials.html#lab-3.1-bootstrapping-wednesday-april-19",
-    "href": "schedulematerials.html#lab-3.1-bootstrapping-wednesday-april-19",
+    "objectID": "schedulematerials.html#lab-3.1-bootstrapping-tuesday-april-16",
+    "href": "schedulematerials.html#lab-3.1-bootstrapping-tuesday-april-16",
     "title": "Course Schedule and Class Materials",
-    "section": "Lab 3.1: Bootstrapping (Wednesday, April 19)",
-    "text": "Lab 3.1: Bootstrapping (Wednesday, April 19)\n\nLab files: Lab 3.1\n\nMake sure to extract (unzip) the lab files before attempting to modify them!"
+    "section": "Lab 3.1: Bootstrapping (Tuesday, April 16)",
+    "text": "Lab 3.1: Bootstrapping (Tuesday, April 16)\n\nLab files: [Lab 3.1]\n\nMake sure to extract (unzip) the lab files before attempting to modify them!"
   },
   {
-    "objectID": "schedulematerials.html#lecture-3.3-hypothesis-testing-thursday-april-20",
-    "href": "schedulematerials.html#lecture-3.3-hypothesis-testing-thursday-april-20",
+    "objectID": "schedulematerials.html#lecture-3.3-hypothesis-testing-wednesday-april-17",
+    "href": "schedulematerials.html#lecture-3.3-hypothesis-testing-wednesday-april-17",
     "title": "Course Schedule and Class Materials",
-    "section": "Lecture 3.3: Hypothesis testing (Thursday, April 20)",
-    "text": "Lecture 3.3: Hypothesis testing (Thursday, April 20)\nReading to do before class: Chapter 15\n\nPreclass quiz due at 2:30 pm\n\nTopics covered:\n\nWhat are hypotheses?\n\\(p\\) values\n\\(p\\) values and decisions – how to make a decision\nLecture webpage: Lecture 3.3\nLecture activity: Lecture 3.3 activity"
+    "section": "Lecture 3.3: Hypothesis testing (Wednesday, April 17)",
+    "text": "Lecture 3.3: Hypothesis testing (Wednesday, April 17)\nReading to do before class: Chapter 15\nTopics covered:\n\nWhat are hypotheses?\n\\(p\\) values\n\\(p\\) values and decisions – how to make a decision\nLecture webpage: [Lecture 3.3]\nLecture activity: [Lecture 3.3 activity]"
   },
   {
-    "objectID": "schedulematerials.html#lecture-3.4-hypothesis-testing-wisdom-tuesday-april-25",
-    "href": "schedulematerials.html#lecture-3.4-hypothesis-testing-wisdom-tuesday-april-25",
+    "objectID": "schedulematerials.html#unit-3-homework---progress-check-due-sunday-april-21-at-235900",
+    "href": "schedulematerials.html#unit-3-homework---progress-check-due-sunday-april-21-at-235900",
     "title": "Course Schedule and Class Materials",
-    "section": "Lecture 3.4: Hypothesis testing wisdom (Tuesday, April 25)",
-    "text": "Lecture 3.4: Hypothesis testing wisdom (Tuesday, April 25)\nReading to do before class: Chapter 16\n\nPreclass quiz due at 2:30 pm China time\n\nTopics covered:\n\nInterpreting p-values\nAlpha and critical values\nPractical vs. statistical significance\nType I and II errors\nPower of a test\nLecture webpage: Lecture 3.4\nLecture activity: Lecture 3.4 activity"
+    "section": "Unit 3 homework - progress check (due Sunday, April 21 at 23:59:00)",
+    "text": "Unit 3 homework - progress check (due Sunday, April 21 at 23:59:00)\n\nHomework files: [Unit 3 homework instructions]"
   },
   {
-    "objectID": "schedulematerials.html#lab-3.2-sampling-wednesday-april-26",
-    "href": "schedulematerials.html#lab-3.2-sampling-wednesday-april-26",
+    "objectID": "schedulematerials.html#lecture-3.4-hypothesis-testing-wisdom-monday-april-22",
+    "href": "schedulematerials.html#lecture-3.4-hypothesis-testing-wisdom-monday-april-22",
     "title": "Course Schedule and Class Materials",
-    "section": "Lab 3.2: Sampling (Wednesday, April 26)",
-    "text": "Lab 3.2: Sampling (Wednesday, April 26)\n\nLab files: Lab 3.2"
+    "section": "Lecture 3.4: Hypothesis testing wisdom (Monday, April 22)",
+    "text": "Lecture 3.4: Hypothesis testing wisdom (Monday, April 22)\nReading to do before class: Chapter 16\nTopics covered:\n\nInterpreting p-values\nAlpha and critical values\nPractical vs. statistical significance\nType I and II errors\nPower of a test\nLecture webpage: [Lecture 3.4]\nLecture activity: [Lecture 3.4 activity]"
   },
   {
-    "objectID": "schedulematerials.html#unit-3-homework---progress-check-due-wednesday-april-26-at-235900",
-    "href": "schedulematerials.html#unit-3-homework---progress-check-due-wednesday-april-26-at-235900",
+    "objectID": "schedulematerials.html#lab-3.2-sampling-tueday-april-23",
+    "href": "schedulematerials.html#lab-3.2-sampling-tueday-april-23",
     "title": "Course Schedule and Class Materials",
-    "section": "Unit 3 homework - progress check (due Wednesday, April 26 at 23:59:00)",
-    "text": "Unit 3 homework - progress check (due Wednesday, April 26 at 23:59:00)\n\nHomework files: Unit 3 homework instructions"
+    "section": "Lab 3.2: Sampling (Tueday, April 23)",
+    "text": "Lab 3.2: Sampling (Tueday, April 23)\n\nLab files: [Lab 3.2]"
   },
   {
-    "objectID": "schedulematerials.html#lecture-4.1-comparing-groups-thursday-april-27",
-    "href": "schedulematerials.html#lecture-4.1-comparing-groups-thursday-april-27",
+    "objectID": "schedulematerials.html#unit-3-homework-due-sunday-april-28-at-235900",
+    "href": "schedulematerials.html#unit-3-homework-due-sunday-april-28-at-235900",
     "title": "Course Schedule and Class Materials",
-    "section": "Lecture 4.1: Comparing groups (Thursday, April 27)",
-    "text": "Lecture 4.1: Comparing groups (Thursday, April 27)\nReading to do before class: Chapter 17\n\nPreclass quiz due at 2:30 pm China time\n\nTopics covered:\n\nConfidence intervals for comparing two samples\nAssumptions and conditions for two-sample hypothesis tests\nTwo-sample \\(z\\) test\nTwo-sample \\(t\\) test\nLecture webpage: Lecture 4.1\nLecture activity: Lecture 4.1 activity"
+    "section": "Unit 3 homework (due Sunday, April 28 at 23:59:00)",
+    "text": "Unit 3 homework (due Sunday, April 28 at 23:59:00)\n\nHomework files: [Unit 3 homework instructions]"
   },
   {
-    "objectID": "schedulematerials.html#unit-3-homework-due-sunday-may-7-at-235900",
-    "href": "schedulematerials.html#unit-3-homework-due-sunday-may-7-at-235900",
+    "objectID": "schedulematerials.html#lecture-4.1-comparing-groups-wednesday-april-24",
+    "href": "schedulematerials.html#lecture-4.1-comparing-groups-wednesday-april-24",
     "title": "Course Schedule and Class Materials",
-    "section": "Unit 3 homework (due Sunday, May 7 at 23:59:00)",
-    "text": "Unit 3 homework (due Sunday, May 7 at 23:59:00)\n\nHomework files: Unit 3 homework instructions"
+    "section": "Lecture 4.1: Comparing groups (Wednesday, April 24)",
+    "text": "Lecture 4.1: Comparing groups (Wednesday, April 24)\nReading to do before class: Chapter 17\nTopics covered:\n\nConfidence intervals for comparing two samples\nAssumptions and conditions for two-sample hypothesis tests\nTwo-sample \\(z\\) test\nTwo-sample \\(t\\) test\nLecture webpage: [Lecture 4.1]\nLecture activity: [Lecture 4.1 activity]"
   },
   {
-    "objectID": "schedulematerials.html#lecture-4.2-returning-to-regression-tuesday-may-9",
-    "href": "schedulematerials.html#lecture-4.2-returning-to-regression-tuesday-may-9",
+    "objectID": "schedulematerials.html#lecture-4.2-returning-to-regression-monday-april-29",
+    "href": "schedulematerials.html#lecture-4.2-returning-to-regression-monday-april-29",
     "title": "Course Schedule and Class Materials",
-    "section": "Lecture 4.2: Returning to regression (Tuesday, May 9)",
-    "text": "Lecture 4.2: Returning to regression (Tuesday, May 9)\nReading to do before class: Chapter 20\n\nPreclass quiz due at 2:30 pm China time\n\nTopics covered:\n\nRegression inference and intuition\nThe regression table\nConfidence and prediction intervals\nLecture webpage: Lecture 4.2\nLecture activity: Lecture 4.2 activity"
+    "section": "Lecture 4.2: Returning to regression (Monday, April 29)",
+    "text": "Lecture 4.2: Returning to regression (Monday, April 29)\nReading to do before class: Chapter 20\n\nPreclass quiz due at 2:30 pm China time\n\nTopics covered:\n\nRegression inference and intuition\nThe regression table\nConfidence and prediction intervals\nLecture webpage: [Lecture 4.2]\nLecture activity: [Lecture 4.2 activity]"
   },
   {
-    "objectID": "schedulematerials.html#lecture-4.3-interpretation-activity-thursday-may-11",
-    "href": "schedulematerials.html#lecture-4.3-interpretation-activity-thursday-may-11",
+    "objectID": "schedulematerials.html#lab-4.1-model-builing-tueday-april-30",
+    "href": "schedulematerials.html#lab-4.1-model-builing-tueday-april-30",
     "title": "Course Schedule and Class Materials",
-    "section": "Lecture 4.3: Interpretation activity (Thursday, May 11)",
-    "text": "Lecture 4.3: Interpretation activity (Thursday, May 11)\n\nHow to read academic statistical results\nLocating the model\nInterpreting the test\nDetermining possible weaknesses of the model\nLecture paper discussion: Paper\nLecture activity: Lecture 4.3 activity"
+    "section": "Lab 4.1: Model builing (Tueday, April 30)",
+    "text": "Lab 4.1: Model builing (Tueday, April 30)\n\nLab files: [Lab 3.2]"
   },
   {
-    "objectID": "schedulematerials.html#unit-4-homework---paper-analysis-due-sunday-may-14-at-235900",
-    "href": "schedulematerials.html#unit-4-homework---paper-analysis-due-sunday-may-14-at-235900",
+    "objectID": "schedulematerials.html#lecture-4.3-interpretation-activity-thursday-may-2",
+    "href": "schedulematerials.html#lecture-4.3-interpretation-activity-thursday-may-2",
     "title": "Course Schedule and Class Materials",
-    "section": "Unit 4 homework - paper analysis (due Sunday, May 14 at 23:59:00)",
-    "text": "Unit 4 homework - paper analysis (due Sunday, May 14 at 23:59:00)\n\nHomework files: Unit 4 homework - paper analysis instructions"
+    "section": "Lecture 4.3: Interpretation activity (Thursday, May 2)",
+    "text": "Lecture 4.3: Interpretation activity (Thursday, May 2)\n\nHow to read academic statistical results\nLocating the model\nInterpreting the test\nDetermining possible weaknesses of the model\nLecture paper discussion: Paper\nLecture activity: [Lecture 4.3 activity]"
   },
   {
-    "objectID": "schedulematerials.html#final-project-due-thursday-may-18-at-235900",
-    "href": "schedulematerials.html#final-project-due-thursday-may-18-at-235900",
+    "objectID": "schedulematerials.html#unit-4-homework---paper-analysis-due-sunday-may-5-at-235900",
+    "href": "schedulematerials.html#unit-4-homework---paper-analysis-due-sunday-may-5-at-235900",
     "title": "Course Schedule and Class Materials",
-    "section": "Final project (due Thursday, May 18 at 23:59:00)",
-    "text": "Final project (due Thursday, May 18 at 23:59:00)\n\nHomework files: Final project instructions"
+    "section": "Unit 4 homework - paper analysis (due Sunday, May 5 at 23:59:00)",
+    "text": "Unit 4 homework - paper analysis (due Sunday, May 5 at 23:59:00)\n\nHomework files: [Unit 4 homework - paper analysis instructions]"
+  },
+  {
+    "objectID": "schedulematerials.html#final-project-due-wednesday-may-8-at-235900",
+    "href": "schedulematerials.html#final-project-due-wednesday-may-8-at-235900",
+    "title": "Course Schedule and Class Materials",
+    "section": "Final project (due Wednesday, May 8 at 23:59:00)",
+    "text": "Final project (due Wednesday, May 8 at 23:59:00)\n\nHomework files: Final project instructions"
   },
   {
     "objectID": "index.html",
     "href": "index.html",
     "title": "Course Introduction",
     "section": "",
-    "text": "Monday/Wednesday class at 12:00-2:30 pm in AB1079\nTuesday lab 6:00-7:15 pm in AB1079\nOffice hours -\n\nMonday, Wednesday 2:45-4:00 pm in WDR 3114\nTuesday, Thursday 1:00 pm to 2:15 pm in WDR 3114\n\nHomeworks are all due on Sunday at 11:59 pm\nAll other announcements and information are posted on the class Teams site"
+    "text": "Monday/Wednesday class at 12:00 pm to 2:30 pm in AB1079\nTuesday lab 6:00 pm to 7:15 pm in AB1079\nOffice hours -\n\nMonday, Wednesday 2:45 pm to 4:00 pm in WDR 3114\nTuesday, Thursday 1:00 pm to 2:15 pm in WDR 3114\n\nHomeworks are all due on Sunday at 11:59 pm\nAll other announcements and information are posted on the class Teams site"
   },
   {
     "objectID": "index.html#assessment",
     "href": "index.html#assessment",
     "title": "Course Introduction",
     "section": "Assessment",
-    "text": "Assessment\n\nPre-class warmup quiz 10%: Before each class session there will be a series of short online questions to prepare you for the day’s material. Completing them before class is mandatory. I will drop your two lowest quiz grades.\nHomework 40%: At the end of a group of content, a homework will be assigned that will ask you to analyze a dataset and answer questions related to that concept group. These homeworks are always due the Sunday after assigned at 11:59 pm China time. Each homework/midterm will also have a best graph contest, where the person whose classmates vote as having the best graph wins some extra credit points.\nHomework checks 5%: To make sure you are making good progress on your homework, the Sunday before the homework is due (except for the first homework) you will be required to submit your progress on the homework so far. You are required to have tried to have answered all the questions covered by the lectures and textbook up to that Sunday. I will not check your answers but rather check to see if you have made a good effort to answer all the questions derived from the material already covered. If you have a reasonable answer for each question checked you will get full points. If you have not made an effort to answer all the questions reviewed you will get a zero.\nUnit 4 homework - paper analysis 5%: At the end of Unit 4, you will select a news article and then do some research on the underlying statistics presented in the news article, critiquing if the news article accurately represented the study reference in the article.\nFinal project 25%: Similar to the Unit 2 homework, the final exam will ask you to analyze a dataset using all the strategies we have learned in class. The paper for this project should be about 2000 words.\nData Camp labs 5%: A number of labs on the website Data Camp will be assigned to you; these labs are pass/fail and you will receive full credit if you complete each of the labs by the specified due date.\nParticipation 10%: As discussed in the attendance policy section, class attendance is important. So is participating in the discussions on Teams. If you attend all the course meetings but do not actively participate on Teams, you can expect a B/B+ participation grade. Receiving an A grade for participation requires that you come to every class and actively participate in Teams (help other students, ask questions, comment on other’s posts and so on)."
+    "text": "Assessment\n\nBeginning of class warmup quiz 10%: At the start of each class session there will be a series of short online questions to start discussion of the class material. I will drop your two lowest quiz grades.\nHomework 50%: At the end of a group of content, a homework will be assigned that will ask you to analyze a dataset and answer questions related to that concept group. These homeworks are always due the Sunday after assigned at 11:59 pm China time. Each homework/midterm will also have a best graph contest, where the person whose classmates vote as having the best graph wins some extra credit points.\nHomework checks 4%: To make sure you are making good progress on your homework, the Sunday before the homework is due (except for the first homework) you will be required to submit your progress on the homework so far. You are required to have tried to have answered all the questions covered by the lectures and textbook up to that Sunday. I will not check your answers but rather check to see if you have made a good effort to answer all the questions derived from the material already covered. If you have a reasonable answer for each question checked you will get full points. If you have not made an effort to answer all the questions reviewed you will get a zero.\nUnit 4 homework - paper analysis 5%: At the end of Unit 4, you will select a news article and then do some research on the underlying statistics presented in the news article, critiquing if the news article accurately represented the study reference in the article.\nFinal project 25%: Similar to the Unit 2 homework, the final exam will ask you to analyze a dataset using all the strategies we have learned in class. The paper for this project should be about 2000 words.\nData Camp labs 5%: A number of labs on the website Data Camp will be assigned to you; these labs are pass/fail and you will receive full credit if you complete each of the labs by the specified due date.\nSyllabus quiz 1%: A short quiz after the first class regarding the course requirements.\nExtra credit **Maximum 3%**: You have several opportunities to earn extra credit. There will be three graph contests, whereby the student who is voted by the other students as having the best graph will receive extra credit points. Additionally, those who respond to other students questions on Teams will also be eligible to earn extra credit points."
   },
   {
     "objectID": "index.html#lateness-policy",
     "href": "index.html#lateness-policy",
     "title": "Course Introduction",
     "section": "Lateness policy",
-    "text": "Lateness policy\nSince the course moves very quickly, if you are submitting work late that means you are falling behind on other material and it may be difficult for you to recover. Therefore, I have a fairly strict lateness policy.\n\nAll major assignments are due at 11:59:00 pm. Not 11:59:01 or 11:59:31.\nIf it is later than 11:59:00 pm, then the assignment will be assessed a 5% lateness penalty\nIf it is later than 12:29:00 am, then the assignment will be assessed a 10% lateness penalty\nIf it is later than 11:59:00 pm the next day, the assignment will be assessed a 50% lateness penalty\nIf it is later than 2 days from the due date, I will no longer accept the assignment\n\n\nPlease be sure to check that your homework is complete and make sure to submit it a few minutes early. You can submit multiple times on Sakai so make sure you have a nearly complete version uploaded even if you want to keep working on it right up to the deadline. I will not be sympathetic to messages that complain of computer problems when you are trying to submit for the first time at 11:58:51 pm."
+    "text": "Lateness policy\nSince the course moves very quickly, if you are submitting work late that means you are falling behind on other material and it may be difficult for you to recover. Therefore, I have a fairly strict lateness policy.\n\nAll major assignments are due at 11:59:00 pm. Not 11:59:01 or 11:59:31.\nIf it is later than 11:59:00 pm, then the assignment will be assessed a 5% lateness penalty\nIf it is later than 12:29:00 am, then the assignment will be assessed a 10% lateness penalty\nIf it is later than 11:59:00 pm the next day, the assignment will be assessed a 50% lateness penalty\nIf it is later than 2 days from the due date, I will no longer accept the assignment\n\n\nPlease be sure to check that your homework is complete and make sure to submit it a few minutes early. You can submit multiple times on Teams so make sure you have a nearly complete version uploaded even if you want to keep working on it right up to the deadline. I will not be sympathetic to messages that complain of computer problems when you are trying to submit for the first time at 11:58:51 pm."
   },
   {
     "objectID": "index.html#attendance-policy",
     "href": "index.html#attendance-policy",
     "title": "Course Introduction",
     "section": "Attendance Policy",
-    "text": "Attendance Policy\nI enjoy randomly calling on students during class, so I recommend you come to class and be prepared as you could be the lucky winner that is called on in any given class section! The lecture will have a number of points on which I will ask students to modify some code and return a result and doing these exercises is mandatory. If you are called on but not attending the lecture without previously notifying me, it will count as an absence and seriously affect your participation grade."
+    "text": "Attendance Policy\nClass will be highly interactive and therefore it is to your advantage to attend class. I do not take roll but if you are not in class for the beginning of class quiz there is no opportunity to make it up without a valid excused absence (doctor’s note, absence arranged in advance, etc.). The lecture will have a number of points on which I will ask students to modify some code and return a result and doing these exercises is mandatory. If you are called on to provide your solution but are not attending the lecture without previously notifying me, it will also be quite embarrassing for you!"
   },
   {
     "objectID": "index.html#contact-policy",
@@ -284,7 +291,7 @@
     "href": "homework.html",
     "title": "Homework",
     "section": "",
-    "text": "Unit 1 homework (due April 2nd at 23:59:00)\n\nUnit 1 homework instructions\nUnit 1 sample solutions\n\n\n\nUnit 2 homework - midterm project (due Sunday, April 16 at 23:59:00)\n\nUnit 2 homework instructions\n\n\n\nUnit 3 homework (due Sunday, May 7 at 23:59:00)\n\nUnit 3 homework instructions\n\n\n\nUnit 4 homework - paper analysis (due Sunday, May 14 at 23:59:00)\n\nUnit 4 homework - paper analysis\n\n\n\nFinal project (due Thursday, May 18 at 23:59:00)\n\nFinal project instructions"
+    "text": "Unit 1 homework (due Sunday, March 31 at 23:59:00)\n\n\nUnit 2 homework - midterm project (due Sunday, April 14 at 23:59:00)\n\n\nUnit 3 homework (due Sunday, April 28 at 23:59:00)\n\n\nUnit 4 homework - paper analysis (due Sunday, May 5 at 23:59:00)\n\n\nFinal project (due Wednesday, May 8 at 23:59:00)"
   },
   {
     "objectID": "rmanual.html",
@@ -389,7 +396,7 @@
     "href": "rmanual.html#helpful-summary-functions",
     "title": "R Manual",
     "section": "Helpful summary functions",
-    "text": "Helpful summary functions\n\nSummarizing data\nThe simpliest way to summarize data is the summary() command.\n\nsummary(mtcars$mpg)\n\n   Min. 1st Qu.  Median    Mean 3rd Qu.    Max. \n  10.40   15.43   19.20   20.09   22.80   33.90 \n\n\nTo develop more complex summary statistics, you can use longer piped structures from dplyr as follows:\n\nmtcars %&gt;%\n  group_by(cyl) %&gt;%\n  summarise(mean = mean(wt), n = n())\n\n# A tibble: 3 × 3\n    cyl  mean     n\n  &lt;dbl&gt; &lt;dbl&gt; &lt;int&gt;\n1     4  2.29    11\n2     6  3.12     7\n3     8  4.00    14\n\n\nTo view more samples of the summarize() function, see here:\nSummarize documetation\n\n\nFinding normal distribution & quantile information\nIf you want to find out details of the normal distribution, there are a suite of function in R that can report the quantile of a specific number of standard deviations from the center of a normal distribution or the reverse.\n\n# What is the amount of area under the normal curve cumulative up to +2 sd from the mean \npnorm(2, mean=0, sd=1)\n\n[1] 0.9772499\n\n# At how many standard deviations away from the mean is 97.5% of the area under the normal curve\nqnorm(0.975, mean=0, sd=1)\n\n[1] 1.959964\n\n\nIf you have an arbitrary distribution (that may not necessarily be normally distributed), you can find a quantile for a given percentage of area under the curve with the quantile() function.\n\n# generate a uniform distribution\ndist&lt;-runif(1000, min=0, max=1)\n\n# theoretically, the quantile should match the probability for a uniform distribution\nquantile(dist, probs=0.5)\n\n      50% \n0.4880869"
+    "text": "Helpful summary functions\n\nSummarizing data\nThe simpliest way to summarize data is the summary() command.\n\nsummary(mtcars$mpg)\n\n   Min. 1st Qu.  Median    Mean 3rd Qu.    Max. \n  10.40   15.43   19.20   20.09   22.80   33.90 \n\n\nTo develop more complex summary statistics, you can use longer piped structures from dplyr as follows:\n\nmtcars %&gt;%\n  group_by(cyl) %&gt;%\n  summarise(mean = mean(wt), n = n())\n\n# A tibble: 3 × 3\n    cyl  mean     n\n  &lt;dbl&gt; &lt;dbl&gt; &lt;int&gt;\n1     4  2.29    11\n2     6  3.12     7\n3     8  4.00    14\n\n\nTo view more samples of the summarize() function, see here:\nSummarize documetation\n\n\nFinding normal distribution & quantile information\nIf you want to find out details of the normal distribution, there are a suite of function in R that can report the quantile of a specific number of standard deviations from the center of a normal distribution or the reverse.\n\n# What is the amount of area under the normal curve cumulative up to +2 sd from the mean \npnorm(2, mean=0, sd=1)\n\n[1] 0.9772499\n\n# At how many standard deviations away from the mean is 97.5% of the area under the normal curve\nqnorm(0.975, mean=0, sd=1)\n\n[1] 1.959964\n\n\nIf you have an arbitrary distribution (that may not necessarily be normally distributed), you can find a quantile for a given percentage of area under the curve with the quantile() function.\n\n# generate a uniform distribution\ndist&lt;-runif(1000, min=0, max=1)\n\n# theoretically, the quantile should match the probability for a uniform distribution\nquantile(dist, probs=0.5)\n\n      50% \n0.5021926"
   },
   {
     "objectID": "rmanual.html#frequency-table-and-contingency-table",
