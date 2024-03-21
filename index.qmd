@@ -57,12 +57,12 @@ Because of the pandemic situation this term, the course structure is going to be
 
 *In general*, each week will proceed roughly as follows:
 
--   Monday-Thursday: Read the textbook chapter, make progress on the lab(s) and homework
+-   **Monday-Thursday**: Read the textbook chapter, make progress on the lab(s) and homework
 -   **Monday 12:00 pm-2:30 pm**: Class session with a conceptual review of the chapter material
 -   **Tuesday 6:00 pm-7:15 pm**: Lab activities designed to help gain familiarity with the technical aspects of using R, RStudio and Quarto.
 -   **Wednesday 12:00 pm-2:30 pm**: Second weekly class session
--   Friday: Complete DataCamp lab(s) before **midnight**
--   Sunday: Complete the homework that is due before **midnight** on Sunday
+-   **Friday**: Complete DataCamp lab(s) before **midnight**
+-   **Sunday**: Complete the homework that is due before **midnight** on Sunday
 
 # How to prepare
 
