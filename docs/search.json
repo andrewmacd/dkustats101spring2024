@@ -25,7 +25,7 @@
     "href": "schedulematerials.html#lecture-1.2-characteristics-of-distributions-friday-march-22",
     "title": "Course Schedule and Class Materials",
     "section": "Lecture 1.2: Characteristics of distributions (Friday, March 22)",
-    "text": "Lecture 1.2: Characteristics of distributions (Friday, March 22)\nReading to do before class: Chapter 2.3-5 and 4\nTopics covered:\n\nHow to describe the shape, center, and spread of a distribution\nHow to compare distributions\nDealing with problem distributions (outliers, reexpression)\nLecture webpage:\nLecture activity:\nQuality YouTube content: Tidyverse music video"
+    "text": "Lecture 1.2: Characteristics of distributions (Friday, March 22)\nReading to do before class: Chapter 2.3-5 and 4\nTopics covered:\n\nHow to describe the shape, center, and spread of a distribution\nHow to compare distributions\nDealing with problem distributions (outliers, reexpression)\nLecture webpage: Lecture 1.2\nLecture activity: Lecture 1.2 activity\nQuality YouTube content: Tidyverse music video"
   },
   {
     "objectID": "schedulematerials.html#online-lab-1.1-due-sunday-march-24-at-115900-pm",
@@ -523,5 +523,12 @@
     "title": "R Manual",
     "section": "Inference for Difference between Two Samples",
     "text": "Inference for Difference between Two Samples\nThe R code for \\(t\\) tests is very similar to the code for hypothesis testing.\n\nfourcyl &lt;- mtcars %&gt;% \n  filter(cyl==4) %&gt;% \n  summarize(mean=mean(mpg),\n            len=length(mpg),\n            sd=sd(mpg))\n\neightcyl &lt;- mtcars %&gt;% \n  filter(cyl==8) %&gt;% \n  summarize(mean=mean(mpg),\n            len=length(mpg),\n            sd=sd(mpg))\n\ndiff.sd &lt;- sqrt(fourcyl$sd ^ 2 / fourcyl$len + eightcyl$sd ^ 2 / eightcyl$len)\ndiff.mpg.t  &lt;- (fourcyl$mean - eightcyl$mean) / diff.sd\n\n# Note that the df here is just an approximation; the textbook provides the correct formula.\n# The rule of thumb method from the the textbook recommends using the lowest df of the two samples\n# minus one.\ndiff.mpg.p  &lt;- 2 * pt(-abs(diff.mpg.t), df = min(c(fourcyl$len, eightcyl$len))-1)\n\ndiff.mpg.p\n\n[1] 1.847002e-05\n\n\nIn other words, the odds that, assuming the two samples have the same sample mean, the odds that we would see a difference between the two sample means this large or larger is effectively zero, therefore we can reject the null hypothesis.\nR does have a built-in method to do this calculation but you should understand how to achieve the same result by direct calcuation.\n\nfourcyl.data &lt;- mtcars %&gt;% \n  filter(cyl==4) %&gt;% \n  select(mpg)\n\neightcyl.data &lt;- mtcars %&gt;% \n  filter(cyl==8) %&gt;% \n  select(mpg)\n\nt.test(fourcyl.data$mpg, eightcyl.data, alternative = \"two.sided\" , mu = 0, var.equal = FALSE, conf.level = 0.95)\n\n\n    Welch Two Sample t-test\n\ndata:  fourcyl.data$mpg and eightcyl.data\nt = 7.5967, df = 14.967, p-value = 1.641e-06\nalternative hypothesis: true difference in means is not equal to 0\n95 percent confidence interval:\n  8.318518 14.808755\nsample estimates:\nmean of x mean of y \n 26.66364  15.10000 \n\n\nDue to the first method using a rule of thumb method for calculating the degrees of freedom, the result is slightly different but very close to the R function result."
+  },
+  {
+    "objectID": "Lecture 1.2 - Characteristics of distributions.html",
+    "href": "Lecture 1.2 - Characteristics of distributions.html",
+    "title": "Lecture 1.2 - Characteristics of distributions",
+    "section": "",
+    "text": "Please enable JavaScript to experience the dynamic code cell content on this page."
   }
 ]
