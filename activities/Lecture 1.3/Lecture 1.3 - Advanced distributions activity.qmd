@@ -38,7 +38,7 @@ We'll work with some items from the McDonald's menu to check our understanding o
 #| warning: false
 
 mcdonalds %>% 
-  filter(Category==c("Breakfast", "Beef & Pork", "Chicken & Fish")) %>% 
+  filter(Category=="Breakfast" | Category == "Beef & Pork" | Category == "Chicken & Fish") %>% 
   group_by(Category) %>% 
   summarize( Min = min(Calories),
              Q1 = quantile(Calories, .25),
