@@ -1,7 +1,10 @@
 ---
 title: "More Quarto Tips"
-format: html
-editor: visual
+author: "Professor MacDonald"
+date: "3/26/2024"
+format: 
+  html:
+    embed-resources: true
 ---
 
 ```{r}
@@ -12,7 +15,7 @@ library(knitr)
 library(kableExtra)
 ```
 
-For this assignment, please create a new Quarto document in RStudio and name it whatever you wish. Save it to your hard drive and make sure the dataset `mcdonalds.csv` is in the same folder as this document.
+For this assignment, please create a new Quarto document in RStudio by selecint `File->New File->Quarto Document...` and name it whatever you wish. Save it to your hard drive and make sure the dataset `mcdonalds.csv` is in the same folder as this document.
 
 ## Quarto document structure
 
@@ -30,7 +33,7 @@ In each Quarto document, there is a YAML header section, denoted by the three `-
 
 Just below the YAML header is usually a setup code block where you load any libraries you plan to use (like `tidyverse`) and any datasets you intend to analyze. This code will be run first when the document renders. **You only need to load libraries once in the document, not in each code block**.
 
-> Create a setup code block just below the YAML header. In this setup code block, load the `tidyverse` library and load the `mcdonalds.csv` dataset using the `read.csv("mcdonalds")` function. Render the document to make sure this works.
+> Create a setup code block just below the YAML header. In this setup code block, load the `tidyverse` library and load the `mcdonalds.csv` dataset using the `mcdonalds <- read.csv("mcdonalds.csv")` command. Render the document to make sure this works.
 
 ### Headings
 
