@@ -72,7 +72,7 @@ The first step in analyzing any dataset is doing some exploratory analysis of th
     -   Make a nice table displaying the 5 number summary. You can make a nice table using either [kable](https://bookdown.org/yihui/rmarkdown-cookbook/kable.html) or with the [visual editing mode](https://quarto.org/docs/visual-editor/content.html#editing-tables) of Quarto. Calculate the five number summary by using the `min()` , `quantile()`, `median()`, and `max()` functions to do this. Show your code in the document (`echo: true`).
     -   Calculate the standard deviation using the `sd()` function. Interpret it - is it large or small? How does it compare to the IQR? What does this tell you about the shape of the distribution?
     -   Would this histogram benefit from a transformation, in your opinion? Why or why not? If it would, please transform it appropriately, make a new histogram, and describe the transformation.
--   Make a boxplot chart comparing the mean of `price` according to the variable `condition`. If you previously transformed your data, keep it transformed for this step. Interpret this graph.
+-   Make a boxplot chart comparing the median of `price` according to the variable `condition`. If you previously transformed your data, keep it transformed for this step. Interpret this graph.
     -   Hint: R imports datasets by default keeping text as text (`strings` in R world). Remember the DataCamp method to convert the `strings` into `factors`.
 
 ### Q4: Comparing categorical variables (5 points)
