@@ -132,9 +132,9 @@ Topics covered:
 
 -   Straightening scatterplots
 
--   Lecture webpage: [Lecture 2.3]
+-   Lecture webpage: [Lecture 2.3](https://andrewm.shinyapps.io/spr2024regressionwisdom/)
 
--   Lecture activity: [Lecture 2.3 activity]
+-   Lecture activity: [Lecture 2.3 activity](activities/Lecture 2.3/lecture.2.3.activity.zip)
 
 ## Online lab 2.2 (due on Friday, April 5 at 23:59:00)
 
