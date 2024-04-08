@@ -158,9 +158,9 @@ Topics covered:
 
 -   Indicator variables
 
--   Lecture webpage: [Lecture 2.4]
+-   Lecture webpage: [Lecture 2.4](https://andrewm.shinyapps.io/spr2024multipleregression/)
 
--   Lecture activity: [Lecture 2.4 activity]
+-   Lecture activity: [Lecture 2.4 activity](activities/Lecture 2.4/lecture.2.4.activity.zip)
 
 ## Lab 2.2: Interpreting coefficients (Tuesday, April 9)
 
