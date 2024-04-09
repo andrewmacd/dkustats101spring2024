@@ -9,6 +9,10 @@ subtitle: DKU Stats 101 Spring 2024 Session 4
 format: 
   html:
     embed-resources: true
+execute: 
+  echo: false
+  message: false
+  warning: false
 ---
 
 ```{r}
@@ -84,12 +88,11 @@ The first step in analyzing any dataset is doing some exploratory analysis of th
 
 ```{r}
 #| label: fig-q3a
-#| fig-cap: "Total sales price histogram"
-#| message: false
-#| warning: false
+#| fig-cap: "Price histogram"
     
 ggplot(boats, aes(x=price)) +
-   geom_histogram(color="white") + labs(title="Distribution of avertised price",x="Price in dollars",y="Count")
+   geom_histogram(color="white") + labs(x="Price in dollars",
+                                        y="Count")
 ```
 
 -   Describe it using the three features of quantitative data.
@@ -108,11 +111,51 @@ ggplot(boats, aes(x=price)) +
 
 > -   Depends on what you are using the measure of center for, but for most cases, due to the right skew, the median is a better measure of center.
 
-    -   Make a nice table displaying the 5 number summary. You can make a nice table using either [kable](https://bookdown.org/yihui/rmarkdown-cookbook/kable.html) or with the [visual editing mode](https://quarto.org/docs/visual-editor/content.html#editing-tables) of Quarto. Calculate the five number summary by using the `min()` , `quantile()`, `median()`, and `max()` functions to do this. Show your code in the document (`echo: true`).
-    -   Calculate the standard deviation using the `sd()` function. Interpret it - is it large or small? How does it compare to the IQR? What does this tell you about the shape of the distribution?
-    -   Would this histogram benefit from a transformation, in your opinion? Why or why not? If it would, please transform it appropriately, make a new histogram, and describe the transformation.
+-   Make a nice table displaying the 5 number summary. You can make a nice table using either [kable](https://bookdown.org/yihui/rmarkdown-cookbook/kable.html) or with the [visual editing mode](https://quarto.org/docs/visual-editor/content.html#editing-tables) of Quarto. Calculate the five number summary by using the `min()` , `quantile()`, `median()`, and `max()` functions to do this. Show your code in the document (`echo: true`).
+    
+```{r}
+#| label: tbl-q3b
+#| tbl-cap: "Price 5 number summary"
+#| echo: true
+    
+kable(boats %>%
+        summarise(min(price),  quantile(price, probs=0.25), median(price), quantile(price, probs=0.75), max(price)), 
+      col.names = c("Min", "25%", "Median", "75%", "Max"))
+```    
+  
+> There are quite a few other ways to generate this result, the above is just one example.  
+    
+-   Calculate the standard deviation using the `sd()` function. Interpret it - is it large or small? How does it compare to the IQR? What does this tell you about the shape of the distribution?
+
+> Standard deviation(sd) is a kind of evaluation for how far each value is from the mean, representing the the spread of the data distribution, so standard deviation is often discussed at the same time as the mean. The result of `sd()` equals to the square root of the variance, with the same unit of the original data, but it can be greatly affected by outliers or skew. In this case, the standard deviation is \$`r round(sd(boats$price))` which is quite large given that the mean is \$`r round(mean(boats$price, na.rm=TRUE))`, besides, most of the data is around \$20,000-\$60,000 based on the IQR, which is much smaller than the standard deviation - this is the influence of outliers.
+
+-   Would this histogram benefit from a transformation, in your opinion? Why or why not? If it would, please transform it appropriately, make a new histogram, and describe the transformation.
+
+```{r}
+#| label: fig-q3c
+#| fig-cap: "Rexpression of price"
+
+options(scipen = 999)
+
+ ggplot(boats, aes(x=log(price))) +
+   geom_histogram(color="white") + 
+   labs(x="Log price in dollars",y="Count")
+```
+
+> Since the data is right skewed, we need a lower-order transformation, such as log or square root. Taking the log of price significantly increases the symmetry of the distribution. Even after taking the log, however, we can see there are still some outliers on the low and high side that are worth investigating.
+
 -   Make a boxplot chart comparing the median of `price` according to the variable `condition`. If you previously transformed your data, keep it transformed for this step. Interpret this graph.
-    -   Hint: R imports datasets by default keeping text as text (`strings` in R world). Remember the DataCamp method to convert the `strings` into `factors`.
+
+```{r}
+#| label: fig-q3d
+#| fig-cap: "Distribution of price by condition"
+
+ggplot(boats, aes(x=log(price), y=condition)) +
+  geom_boxplot(color="black", outlier.color="red", fill="blue") + 
+   labs(x="Log price in dollars",y="Condition")
+```
+
+> This graph seems to indicate that there is not a substantial difference between the distribution of new and used boats, though there are more outliers among new boats (in both directions) as opposed to used boats. The IQR of used boats is larger (indicating the larger box size), indicating that perhaps there is more variation among 'average' cases but fewer outliers. While the IQR of used boats being larger is not surprising (used boats may vary significantly in quality and age), the difference in outliers is surprising and worth further investigating.
 
 ### Q4: Comparing categorical variables (5 points)
 

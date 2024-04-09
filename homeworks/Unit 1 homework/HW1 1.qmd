@@ -1,0 +1,314 @@
+---
+title: "Homework 1 Answers"
+author: "Anonymous"
+format: html
+editor: visual
+---
+
+# Setup
+
+```{r}
+#| label: setup
+#| include: false
+#| warning: false
+library(tidyverse)
+library(knitr)
+library(dplyr)
+library(tidyr)
+boats <- read.csv("boats.csv")
+```
+
+# Q1
+
+**Answer:**
+
+id: Identifier
+
+type: Categorical variables
+
+boatClass: Categorical variables
+
+year: Categorical variables
+
+condition: Categorrical
+
+length_ft: Quantitative
+
+beam_ft: Quantitative
+
+dryWeight_lb: Quantitative
+
+price: Quantitative
+
+sellerId: Identifier or categorcial
+
+```{r}
+#| echo: false
+
+```
+
+# Q2: Literature review
+
+**Answer:**
+
+1)  Condition: Used boats can be cheaper while having almost the same performance as new ones. Type: The function of the boat should match with your reason for purchasing. Price: Some boats are affordable while others are not. The price correlates with its power systems, electronics and designs. Brands: Different boat manufactorers have different insurance, discounts and after-sales policies.
+
+Links:https://www.boatsetter.com/boating-resources/things-to-know-before-buying-a-boat#:\~:text=Some%20of%20the%20steps%20you%20should%20take%20when,doing%20a%20full%20inspection%2C%20and%20closing%20the%20deal. https://www.boats.com/boat-sellers-guide/boat-prices-and-boat-values/
+
+2)  Conditions and prices: Used boats can be cheaper while having almost the same performance as new ones. Types and prices: The price of the boat varies among different boat types. Bowriders are usually between \$25,000 and \$50,000 while cruisers range from \$6,155 - \$1,663,731. Within the same price, the better the performance is, the more expensive the price usually is. Length & beam and prize: Usually, the larger a boat is, the more expensive it is.
+
+Links: www.imdb.com/name/nm0696975/ https://www.bing.com/ck/a?!&&p=ef0d97b18ac9d136JmltdHM9MTcxMTQ5NzYwMCZpZ3VpZD0zMWQ0Yzk4YS02M2I4LTY4MjktMWJhMy1kZDg4NjI5MTY5Y2YmaW5zaWQ9NTI2Nw&ptn=3&ver=2&hsh=3&fclid=31d4c98a-63b8-6829-1ba3-dd88629169cf&psq=cruiser+boat+price&u=a1aHR0cHM6Ly93d3cuYm9hdHMuY29tL2JvYXRzLWZvci1zYWxlLz9tYWtlPWNydWlzZXJz&ntb=1
+
+# Q3: Describing the data (10 points)
+
+**Answer**
+
+```{r}
+ggplot(boats,aes(x=price))+geom_histogram()
+```
+
+1\) It surprised me. Most of the price are below 500000 USD while there are a few outliers with extremely expensive price.
+
+2\) Median. The mean of these data is profoundly affected by outliers and thus being unable to represent the whole dataset while the median is not.
+
+3\) ↓
+
+```{r}
+#| echo: true
+boats_price_summa <- c(min = min(boats$price), 
+                    Q1 = quantile(boats$price, 0.25), 
+                    median = median(boats$price), 
+                    Q3 = quantile(boats$price, 0.75), 
+                    max = max(boats$price))
+kable(boats_price_summa,col.names="Values",caption = "<b>The 5 number summary of boat price</b>")
+```
+
+4\) ↓
+
+```{r}
+#| echo: true
+standard_deviation<-sd(boats$price)
+standard_deviation
+coefficient_of_variation<-standard_deviation/mean(boats$price)
+coefficient_of_variation
+```
+
+The standard deviation is around 2.14 times larger than the mean. There is a significant variation among the price of the boats.
+
+5\) It would benefit from transformation. I removed the boats which are unnecessarily expensive. Those extremely expensive prices are special cases and don't have much reference value. Since Q3 for the price data is around 6e+4, I first set the maximum price (6e+4)/(3/4)=8e+4 but found it too low. Then, by examine the histogram for boats cheaper than 7.5e+5, I selected 1.5e+5 as the boundary for disposed values and retained values.
+
+```{r}
+filtered_boats<-boats%>%
+  filter(price<150000)
+ggplot(filtered_boats,aes(x=price))+geom_histogram(binwidth = 10000)
+```
+
+6\) ↓
+
+```{r}
+ggplot(filtered_boats,aes(x=condition, y=price))+geom_boxplot()
+
+```
+
+# Q4: Comparing categorical variables
+
+**Answer:**
+
+1\)
+
+```{r}
+
+fuel.type.table <- table(factor(boats$fuelType), factor(boats$year))
+
+kable(fuel.type.table)
+```
+
+```{r}
+boats_decades <- boats %>%
+  mutate(decade = 10 * (year %/% 10))
+boats_decades %>%
+  group_by(fuelType, decade) %>%
+  summarize(n = n()) %>%
+  spread(decade, n)
+```
+
+2\)
+
+```{r}
+kable(addmargins(fuel.type.table))
+```
+
+3\)
+
+```{r}
+prop.table(fuel.type.table)
+```
+
+4\) I would recommend the gasoline boats and boats using other tyoes of fuels. As we can see from the histogram below, among the boats with known fuel type, gasoline boats and boats using other fuel types are rapidly increasing in proportions, suggesting that they are probably increasingly favorable.
+
+```{r}
+boat_fuel<- boats %>%
+  group_by(fuelType)
+ggplot(boat_fuel,aes(x=year,fill=fuelType))+geom_histogram(aes(y=..density..),position="dodge",binwidth = 10)+labs(title = "Boat Fuel Type Proportions", x = "Year", y = "Proportion",fill="Fuel types")+theme(plot.title = element_text(hjust = 0.5))+scale_fill_manual(values = c("gasoline" = "skyblue", "diesel" = "lightgreen", "other" = "pink"))
+  
+```
+
+# Q5: Understanding and comparing distributions
+
+**Answer:** 1)
+
+```{r}
+boats_len_summa <- c(min = min(boats$length_ft), 
+                    Q1 = quantile(boats$length_ft, 0.25), 
+                    median = median(boats$length_ft), 
+                    Q3 = quantile(boats$length_ft, 0.75), 
+                    max = max(boats$length_ft))
+kable(boats_len_summa,col.names="Length (feet)",caption = "<b>The 5 number summary of boat length</b>")
+upper.fence<-25+1.5*(25-18.58)
+upper.fence
+lower.fence<- 18.58-1.5*(25-18.58)
+lower.fence
+upper.filtered.boats <- boats%>%
+  filter(length_ft>upper.fence)
+upper.filtered.boats %>%
+  group_by(fuelType) %>%
+  summarize(n = n()) %>%
+  spread(fuelType, n)
+lower.filtered.boats <- boats%>%
+  filter(length_ft<lower.fence)
+lower.filtered.boats %>%
+  group_by(fuelType) %>%
+  summarize(n = n()) %>%
+  spread(fuelType, n)
+```
+
+According to the tables, there are 42 outliers with sizes larger than usual and 10 outliers with sizes smaller than usual. They are not outliers caused by wrongful measurements or chance, thus cannot be neglected.
+
+2\)
+
+```{r}
+ggplot(boats,aes(x=fuelType, y=length_ft))+geom_boxplot()
+```
+
+We can see from the tables that diesel boats are generally larger in size.
+
+# Q6: The Normal distribution
+
+For boats under 20 feet, a rough rule of thumb is that the maximum weight capacity in kilograms of a boat is approximately the length in feet times the width (or beam) of the boat times 5. In a 2006 study of Americans, the average weight was approximately 70 kilos with a standard deviation of 11 kilos.
+
+**Answer:** 1) sd=21.27kg, mean=73.16kg,
+
+f(x)=e\^{\[-(x-73.16)\^2\]/109981}/88.78
+
+Data comes from adults in the CDC's 2015-16 NHANES survey. Weights were measured at a mobile examination center (MEC).
+
+2\)
+
+| ID      | Length (ft) | Beam (ft) |
+|---------|-------------|-----------|
+| 6842735 | 9.83        | 4.33      |
+| 7055543 | 9.83        | 4.33      |
+| 6219877 | 3           | 1         |
+| 7041942 | 18.67       | 7.83      |
+| 6796269 | 18.67       | 7.83      |
+
+: Boats under 20ft
+
+3\)
+
+|     | -0.295  | -1.32   | 1.03    |
+|-----|---------|---------|---------|
+| ID  | 6219877 | 6842735 | 7041942 |
+| ID  |         | 7055543 | 6796269 |
+
+: Boats under 20ft
+
+4\) The passengers each weigh: 73.16-2\*21.27=30.62, 73.16-21.27=51.89, 73.16, 7316+21.27=94.43, 73.16+2\*21.27=115.7 (kg)
+
+Maximum weight capacity: Length\*beam\*5
+
+Thus, for the boats with Z scores -0.295, -1.32, 1.03，the weight capacity is: 212.82kg, 15kg, 730.93kg.
+
+|                 | -2  | -1  | 0   | 1   | 2   |
+|-----------------|-----|-----|-----|-----|-----|
+| 6219877         | 0   | 0   | 0   | 0   | 0   |
+| 6842735/7055543 | 7   | 4   | 3   | 2   | 2   |
+| 7041942/6796269 | 23  | 13  | 9   | 7   | 6   |
+
+: Boats and passengers capacity
+
+Were I a boat maker, the cutoff capacity should be calculated using people with weight Z score +1. +2 is uneccesary because it's very rare and the cost of seat would be high. 0 is not as good as +1 because it's merely 50% possibility that the total weight of full-loaded passengers will surpass the weight capacity.
+
+5\)
+
+6219877: Two passengers, Z: \<-2
+
+6842735/7055543: Two passengers, Z: +1
+
+7041942/6796269: Two passengers, Z: \>+2
+
+6219877 is a powered inflatable boat, while 7041942/6796269 are wooden boats. The materials might influenced their passenger capacities.
+
+Data from [Boats.com](https://www.boats.com/)
+
+# Q7
+
+**Answer:**
+
+1\)
+
+```{r}
+ggplot(boats, aes(x=length_ft, y=price))+geom_point()+geom_smooth(method="lm", se=FALSE,color="blue")+geom_text(data=boats %>% filter(length_ft > 50),aes(label=id), vjust=0.5, color="red")
+```
+
+There's no clear pattern. Generally, the larger the length is, the more expensive the price is. Hoever, price is an essential factor influencing the price. The outliers shouldn't be excluded directly. They are not generated by false measurements or by chance. We can decide to exclude or include them according to the requirements of our statistic analysis.
+
+2\)
+
+```{r}
+boat.filter<-boats%>%
+  filter(price<100000)
+ggplot(boat.filter, aes(x=length_ft, y=price))+geom_point()+geom_smooth(method="lm", se=FALSE,color="blue")
+```
+
+The correlation can be 0.75, it is quite strong. We can communicate with the client about the profit for making and selling the boats.
+
+3\)
+
+```{r}
+boat.filter<-boats%>%
+  filter(price<100000)
+ggplot(boat.filter, aes(x=length_ft, y=price, color=condition))+geom_point()+geom_smooth(method="lm", se=FALSE,color="blue")
+```
+
+Yes. Used boats distibute widely in size and are much cheaper than new ones.
+
+# Q8: Putting it all together
+
+**Answer:**
+
+1\) The first line chart depicted the relationship between general boat size (boat length times boat beam) and boat price. Generally, the larger the size of the boat is, the more expensive the boat is. Of course, it's apparent to see that boat size does not decides on boat price.
+
+The second box chart compared the price of boats per square meter of general boat size with different fuel types. Generally, diesel boats are generally more expensive than boats using other types of fuels while gasoline boats have more expensive outliers in price. It's estimated that gasoline boats have diverse usages.
+
+The third histogram shows that new boats are getting increasingly popular recently. Customers seem to care more about the sailing experience and the emotional value of buying a ship than just the price than before.
+
+```{r}
+ggplot(boats,aes(x=length_ft*beam_ft,y=price))+geom_line()
+boat.filter<-boats%>%
+  filter(price/(length_ft*beam_ft)<10000)
+ggplot(boat.filter,aes(x=fuelType, y=price/(length_ft*beam_ft)))+geom_boxplot()
+boats.condition<- boats %>%
+  group_by(condition)
+ggplot(boats.condition,aes(x=year,fill=condition))+geom_histogram(aes(y=..density..),position="dodge",binwidth = 10)+labs(title = "Boat Fuel Type Proportions", x = "Year", y = "Proportion",fill="Condition")+theme(plot.title = element_text(hjust = 0.5))+scale_fill_manual(values = c("new" = "skyblue", "used" = "lightgreen", "other" = "pink"))
+```
+
+2\) Finding 1: Most of the boats gather at price range of 100,000 USD, while there are outliers with extremely high price. It's recommended for clients to fist select a price range according to the requirment on boat type and then look through a detail.
+
+Finding 2: Diesel engines are commonly used in large and expensive boats while gasoline boats have diverse sizes and prices. Also, gasoline boats are getting increasing popular in recent years. Unless there is a special need, the client is recommended to purchase gasoline boats.
+
+Finding 3: If the client is looking for cheap boats, he or she may prioritise second-hand ones. They are cheaper in price and its easy to obtain user experience and experiments on using and mantianience from the previous owner.
+
+3\) First, gasoline boats can earn more money than diesel ones unless our business is targeted at realm where diesel boats are favoured. Second, we can offer a second-hand boat trading services while stick to manufacturing new boats since new ones are more popular than before. Third, we can try to get some special large orders, these orders of boats may be unusually expensive, and at the same time make more money than ordinary orders.
+
+4\) Q1-Q7 failt to recognize the influence of size of the boats on the boat price. For instance, when comparing prices of different fuel types, we fail to be aware that diesel are usually used in larger boats which are more expensive. Thus, the price difference between diesel and gasoline boats are overplayed.
