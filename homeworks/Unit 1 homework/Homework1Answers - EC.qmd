@@ -1,0 +1,420 @@
+---
+title: "Homework 1 Instructions"
+author: "Anonymous"
+date: "3/25/2024"
+output:
+  html_document:
+    toc: true
+subtitle: DKU Stats 101 Spring 2024 Session 4
+format: 
+  html:
+    embed-resources: true
+---
+
+```{r}
+#| label: setup
+#| include: false
+boats <- read.csv("boats.csv")
+
+
+library(ggplot2)
+library(dplyr)
+library(tidyr)
+library(knitr)
+# Put any setup code here
+```
+
+![](boats.png)
+
+
+## Part 1: One variable analysis
+
+### Q1: What kind of dataset do we have? (5 points)
+
+-   **According to the definitions in the textbook, describe the Five W's for this dataset.**
+
+The 5 W's are as follows:
+
+Who: The dataset is of the 387 individual boats
+
+What: the data set as listed on the website \[boattrader.com\] includes specific boat characteristics (id,type,boatClass,make,model,year,condition,length_ft,beam_ft,dryWeight_lb, hullMaterial,fuelType,numEngines,totalHP,maxEngineyear,minEngineYear,engineCategory,price,sellerid,city,state,zip,created date, created month, created year)
+
+When: The dataset shows the recent data of boats from year 2011-2019
+
+Where: dataset is US centric (within 50 american states)
+
+Why: Data set is useful in checking price predictors and determining purchasing decisions
+
+-   **Using the definitions in the textbook, describe the variable type for the following variables:**
+
+    -   **`id`** identifier variable
+    -   **`type`** categorical variable
+    -   **`boatClass`** categorical variable
+    -   **`year`** categorical variable and can also be quantitative variable
+    -   **`condition`** categorical variable
+    -   **`length_ft`** quantitative variable
+    -   **`beam_ft`** quantitative variable
+    -   **`dryWeight_lb`** quantitative variable
+    -   **`price`** quantitative variable
+    -   **`sellerId`** identifier variable
+
+### Q2: Literature review (5 points)
+
+**Find a news article online that discusses what are the major features that determine what people are looking for boats and include the link in this section.**
+
+https://www.tradeonlytoday.com/industry-news/future-boaters-are-different
+
+**Based on the article and your own personal expectations, what are some ways we might expect the data to be distributed or variables related? Make a list of at least three things we should expect or look for in the data and write a reason why we should expect it (no need to cite academic papers, just write down your reasons). Reasons should be thoughtful and at least two sentences explaining your logic for the expectation.**
+
+Price. As the price of boats reaches its ceiling (max value i.e. most expensive boats) we will have fewer and fewer buyers because the affordability goes down for the mass population who do not have earnings that can afford the high price of the expensive boats.
+
+Size. The size of the boat is important because it influences where you can use the boat, the boat's capabilities, and the level of comfort. As the size would go up it would mean more material and technical expertise went in its manufacturing so it would be more expensive. It would also have higher fuel costs and maintenance costs because of the bigger size.
+
+Engines. The higher the number of engines a boat would have, the greater its power output (horsepower). Engines produce power and thrust in the boat and the bigger and more they are the higher output of horse power. higher the number of engines means higher the price of the boat as well becasue the engine is the one of the most important and expensice pieces of technology on the boat
+
+Condition and Model year: The better the condition of the boat and the more recent the model year the more expensive the boat would be. It just makes sense that a brand new or near brand new boat would be higher priced because of new materials.
+
+### Q3: Describing the data (10 points)
+
+The first step in analyzing any dataset is doing some exploratory analysis of the variables.
+
+-   Make a histogram of `price`.
+
+```{r}
+ggplot(boats, aes(x=price)) +
+geom_histogram (bins = 15
+                )
+```
+
+```         
+-   Describe it using the three features of quantitative data.
+```
+
+shape: the histogram has a single mode so it is unimodal,it is not symmetric and rather skewed to the right because of the right tail stretches out farther than the left, and there are 2 outliers that stand away from the body of the distribution (at 1500000 and one higher than 1500000)
+
+center: The mean is 71643.59 and the median is 35680 . so the center is better described by the median
+
+spread: The range is 5191799900 but the higher price boats pull this value up. using the IQR which is 39952.5 is a better measure for spread. The standard deviation is 153042.5
+
+```         
+-   Does the histogram of `price` surprise you? Why or why not?
+```
+
+It does not surprise becasue it is expected that there are only a few options in the very expensive price range as these options are typically luxury boats and would thus have a few manufacturers making such boats and not a lot of buyers being able to afford them. Most options are concentrated on the lower end which are cheaper boats for the majority population that can afford them
+
+```         
+-   Which is a better measure of center of the histogram, mean or median?
+```
+
+The median is a better measure because the mean is pulled up by the few boats which are very high in price. The median is less influenced by the skewness or outliers than the mean,
+
+```         
+-   Make a nice table displaying the 5 number summary. You can make a nice table using either [kable](https://bookdown.org/yihui/rmarkdown-cookbook/kable.html) or with the [visual editing mode](https://quarto.org/docs/visual-editor/content.html#editing-tables) of Quarto. Calculate the five number summary by using the `min()` , `quantile()`, `median()`, and `max()` functions to do this. 
+```
+
+```{r}
+min(boats$price)
+max(boats$price)
+median(boats$price)
+quantile(boats$price)
+
+```
+
+5 Number Summary for variable price
+
+| Min | Lower Quartile | Median | Upper Quartile | Max     |
+|-----|----------------|--------|----------------|---------|
+| 519 | 19995.0        | 35680  | 59947.5        | 1799900 |
+
+```         
+-   Calculate the standard deviation using the `sd()` function. Interpret it - is it large or small? How does it compare to the IQR? What does this tell you about the shape of the distribution?
+```
+
+```{r}
+sd(boats$price)
+IQR(boats$price)
+#the SD is 153042.5. Compared to the IQR (39952.5) it is quite high. it shows that there are outlying values and the distribution will be skewed and will have high mean compared to median. The high value of the outlier pulls up the mean and inflates the standard deviation 
+```
+
+```         
+
+-   Would this histogram benefit from a transformation, in your opinion? Why or why not? If it would, please transform it appropriately, make a new histogram, and describe the transformation.
+```
+
+The histogram would benefit from a transformation because the higher values could be compressed and the lower ones could be more spread out. A log transformation would be useful here.
+
+```{r}
+transboats<-ggplot(boats, aes(x=price)) +
+geom_histogram (bins = 15)+
+scale_x_log10()
+
+transboats
+                
+```
+
+-   Make a boxplot chart comparing the median of `price` according to the variable `condition`. If you previously transformed your data, keep it transformed for this step. Interpret this graph.
+
+    -   Hint: R imports datasets by default keeping text as text (`strings` in R world). Remember the DataCamp method to convert the `strings` into `factors`.
+
+    ```{r}
+    ggplot(boats, aes(x=condition, y=price))+
+    geom_boxplot()+
+    scale_y_log10()
+    #median price of used condition boats is higher than median of new condition boats
+    ```
+
+### Q4: Comparing categorical variables (5 points)
+
+-   One interesting piece of information the dealer would like to know is if there is any change in the types of boats being sold according to what type of fuel it uses. In particular, they wonder if some fuel types are becoming less popular and therefore more difficult to sell in new boats. The best way to examine this relationship is with a contingency table.
+
+```{r}
+boats_table<-table(boats$condition, boats$fuelType)
+ftable(boats_table)
+
+```
+
+```         
+-   Hint: documentation on how to produce contingency tables (also called crosstab tables) can be found [here](http://analyticswithr.com/contingencytables.html) or you can also use the `taybl()` function from the package `janitor` - instructions [here](https://cran.r-project.org/web/packages/janitor/vignettes/tabyls.html).
+```
+
+-   Add margins to your table. Does it change your interpretation?
+
+    |                        | Diesel | Gasoline | Other+ Empty Values |
+    |------------------------|--------|----------|---------------------|
+    | **New**                | 1      | 62       | 101+52 = 153        |
+    | **Used**               | 22     | 75       | 72+2 = 74           |
+    | ***Total (New+Used)*** | *23*   | *137*    | *227*               |
+
+    since in the New row in the above table, only 1 diesel boat is seen we can infer that diesel fuel is less popular and therefore more difficult to sell in new boats. But closer examination also reveals it is the second highest priced boat aswell. The empty values are checked to be boats that have other fuel types and are thus added in the other category in the table above
+
+-   Now convert your table into a proportions table. Does this better help explain what the data show?
+
+    ```{r}
+       prop.table(boats_table)
+    ```
+
+    |             | Diesel      | Gasoline    | Other+ Empty Values       |
+    |-------------|-------------|-------------|---------------------------|
+    | **New**     | 0.002583979 | 0.160206718 | 0.260981912 + 0.134366925 |
+    | **Used**    | 0.056847545 | 0.193798450 | 0.186046512 + 0.005167959 |
+    | ***Total*** | 0.059431524 | 0.353005168 | 0.586563308               |
+
+    This does help explain the data more clearly. We can clearly see that the other fuel type makes up more than half of the boats with about 58.6 percent, gasoline at 35.3 percent and the diesel boats about 5.9 percent
+
+-   What should you recommend to the dealer? What are some additional questions or areas of research do the results suggest you should look into?
+
+    suggestions should be based on looking into the other fuel type boats followed by gasoline and probably avoiding the diesel fuel type. There is a case to be made to look further into the new boats with other fuel type as they are the ones with the highest proportion about 26 percent, followed by used gasoline at 19 percent and then used boats with other fuel type at 18 percent, followed by new gasoline boats at 16 percent .
+
+### Q5: Understanding and comparing distributions (5 points)
+
+-   Using the five number summaries, calculate if `length_ft` has any outliers according to the rule described in the textbook for outliers in boxplots. Show your calculations. Do you believe the outliers identified are real outliers? Why or why not? Consider the purpose of your report when preparing your answer.
+
+    ```{r}
+    min(boats$length_ft)
+    max(boats$length_ft)
+    median(boats$length_ft)
+    quantile(boats$length_ft)
+
+    ```
+
+    since the rule for outliers is \>Q3+1.5(IQR) & \<Q1-1.5(IQR)
+
+    outliers are \>Q3+1.5(Q3-Q1) & \<Q1-1.5(Q3-Q1)
+
+    -   \>25+1.5(25-18.58) & \<18.58-1.5(25-18.58)
+
+    -   \>34.63 & \<8.95
+
+```{r}
+upper_outlier<-boats%>%
+  filter(length_ft>34.63)
+str(upper_outlier) # shows 42 observations 
+
+lower_outlier<-boats%>%
+  filter(length_ft<8.95)
+str(lower_outlier) # shows 10 observations
+
+
+```
+
+-   so in total as per the textbook definition the data boats data set has 52 outliers. I dont believe these are actual outliers because boats vary greaty in size because of purpose, need and the relevant specifications the buyer is hoping to get from them. The bigger boats still have benefit and need for specific buyers who are not interested in the average small dingy for fishing or just moving across a lake
+
+-   Create a graph of boxplot of `length_ft` by `fuelType`. What can you conclude from this display? Would any of these subgroups benefit from having `length_ft` re-expressed? Why or why not?
+
+```{r}
+ ggplot(boats, aes(x=fuelType, y=length_ft))+
+ geom_boxplot() 
+
+```
+
+-   the boats with diesel as the fuel type have higher length overall and higher median length. They are bigger boats as diesel is a common fuel for bigger stronger engines. It is a fuel type with higher output energy and thus will be fuel for bigger vessels.
+-   the other fuel type might benefit from a log transformation in the y asxis to help address the one outlier and the skew in the direction.
+
+### Q6: The Normal distribution (5 points)
+
+For boats under 20 feet, a rough rule of thumb is that the maximum weight capacity in kilograms of a boat is approximately the length in feet times the width (or beam) of the boat times 5.
+
+In a 2006 study of Americans, the average weight was approximately 70 kilos with a standard deviation of 11 kilos.
+
+-   In formal notation, write the Normal model of human weight.
+
+    let weight be W mean be m and standard deviation be sd so notation becomes:
+
+    W \~ N(70, 11²)
+
+-   Select at least five boats that are under 20 feet from the database. Make a table of the boats.
+
+    ```{r}
+    boats_less_20ft <- boats[boats$length_ft < 20, ]
+
+    select_boats <- boats_less_20ft[4:8, ]
+    print(select_boats)
+    ```
+
+-   The title of the columns of the table should be *z* scores ranging from -2 to +2
+
+```{r}
+z_score <- c(-2, -1, 0, 1, 2)
+
+boat_table <- data.frame(matrix(NA, nrow = 5, ncol = length(z_score)))
+colnames(boat_table) <- z_score
+
+for (i in 1:5) {
+  boat <- select_boats[i, ]
+  boat_table[i, ] <- boats$length_ft + z_score
+}
+
+print(boat_table)
+```
+
+-   Calculate what is the maximum number of passengers the boat can hold if all of the passengers each weigh the following *z* scores: (-2, -1, 0, 1, 2), show your calculations below your table.
+
+```{r}
+z_scores <- c(-2, -1, 0, 1, 2)
+
+passenger_weight <- 70
+
+max_passengers <- boat_table + z_scores * passenger_weight
+
+print(max_passengers)
+```
+
+-   If you are a boat maker, what cutoff would you set for boat passenger capacity and why? Maximum weight capacity(kg) = length(ft) \* beam(ft) \* 5
+
+```{r}
+select_boats$max_weight_capacity <- select_boats$length_ft * select_boats$beam_ft * 5
+
+print(select_boats$max_weight_capacity)
+```
+
+The maximum of passengers that a boat can hold is its maximum weight capacity with the average weight per passenger.
+
+Maximum passengers = maximum weight capacity(kg) / average weight per passenger(kg)
+
+The formula for z scores is: z = (y - mean) / std
+
+|                | -2 (48kg) | -1 (59kg) | 0 (70kg) | 1 (80kg) | 2 (92kg) |
+|----------------|-----------|-----------|----------|----------|----------|
+| Boat 1 (15kg)  | 0         | 0         | 0        | 0        | 0        |
+| Boat 3 (731kg) | 15        | 12        | 10       | 9        | 8        |
+| Boat 4 (731kg) | 15        | 12        | 10       | 9        | 8        |
+| Boat 5 (811kg) | 17        | 14        | 12       | 10       | 9        |
+| Boat 6 (603kg) | 13        | 10        | 9        | 8        | 7        |
+
+-   Look up three of the boats in your table on the internet and write down what the manufacturer set as the recommended number of people on the boat. What *z* score cutoff does it seem the boatmaker made in each of the cases?
+
+Yamaha Outboards F20: 0 passengers (motor as no passengers are supposed to board it)
+
+Nitro Z18: 4 passengers: The manufacturer chose this value to ensure maximum safety, as our table showed that around 10 passengers is okay.
+
+## Part 2: Two variable analyis
+
+### Q7: Relationship between variables (15 points)
+
+-   Make a scatterplot of `price` as a function of `length_ft`. Add a linear smoother to the plot and label any points you consider to be an outlier using `geom_text()` - the label for the outlier should print the observation's `id`. If necessary, transform any variables
+
+    ```{r}
+    scatterplot<-ggplot(boats, aes(x = length_ft, y = price)) +
+      geom_point() +
+    geom_smooth(method = "lm", se = FALSE, ) +
+      labs(x = "Length (ft)", y = "Price") +  
+      ggtitle("Scatterplot of Price vs. Length (ft)")  
+
+    boats$outlier <- ifelse(abs(resid(lm(price ~ length_ft, data = boats))) > 2, as.character(boats$id), NA)
+
+    scatterplot + geom_text(data = boats, aes(label = outlier), hjust = -0.1, vjust = 0.5)
+
+
+
+
+    ```
+
+    1.  Do you think there is a clear pattern? Describe the association between `price` and `length_ft`.
+
+        The association between price and length is positive and linear.It is moderately strong, with many outliers. There seems to be some pattern in data.
+
+    2.  Find out the details of any outliers you have identified. Do you think the outlier(s) should be excluded from the analysis? Why or why not?
+
+        Based on this information, it is evident that certain data points qualify as outliers and should be excluded from the analysis due to their anomalous or erroneous nature. However, other outliers may represent genuine occurrences and should be considered when interpreting the data.
+
+        example, we may choose to eliminate all boats with a length smaller than 13 feet:
+
+-   Make a second graph excluding any outliers you have identified
+
+-   
+
+    ```{r}
+    boats_filtered <- boats[is.na(boats$outlier), ]
+
+    scatterplot_filtered <- ggplot(boats_filtered, aes(x = length_ft, y = price)) +
+      geom_point() +
+      labs(x = "Length (ft)", y = "Price") +  
+      ggtitle("Scatterplot of Price vs. Length (ft) (Excluding Outliers)")
+
+    scatterplot_filtered <- scatterplot_filtered + geom_smooth(method = "lm", se = FALSE)
+
+    print(scatterplot_filtered)
+
+
+
+
+    ```
+
+    3.  What do you estimate the correlation to be, without using technology?
+
+        estimated correlation to be 0.70
+
+    4.  Check the conditions for correlation
+
+        The variables `price` and `length_ft` are both quantitative.\
+        - The scatter plot is straight enough.\
+        - no outliers.
+
+    5.  Find and interpret the correlation coefficient for this relationship
+
+```{r}
+correlation <- cor(boats_filtered$length_ft, boats_filtered$price)
+
+print(correlation)
+```
+        
+
+    6.  Interpret this graph. What is some useful information we could communicate to the client? What questions for additional investigation does this graph prompt for you?
+
+-   Now, make a third graph of the same two variables but color it by `condition`. Add a linear smoother for each condition.
+
+    7.  How does this graphical display change your interpretation you developed in your answer to part 6? Why do you think you the relationship is structured like this? Explain.
+
+### Q8: Putting it all together (15 points)
+
+Through the analysis conducted in the previous section **and through at least one additional investigation of your own (which can be an additional graph or table, that analyzes a different relationship or distribution than one asked about in the questions above but you think is meaningful and important to communicate the client)**, write three paragraphs outlining what you think are the main findings of questions 1-7 plus your additional investigation. What would you recommend to your boss as to what types of boats sell for the most money? What information are we missing in this dataset that we would need to better understand boat price?
+
+Our objective with this analysis was to gain insights into the boat market in the United States and identify the factors influencing price trends. To accomplish this, we obtained a dataset from the online platform boattrader.com, which included information on over 300 boats for sale, such as type, price, fuel type, and more. Our examination of the data led us to several key findings.
+
+The price range of boats varied significantly, spanning from \$500 to \$1,800,000, with the majority falling within the lower price range (under \$250,000). Upon calculating the standard deviation and conducting comparisons, we determined that the distribution of prices exhibited a high degree of skewness. Additionally, we observed that used boats tended to have more consistent prices compared to new boats, which displayed more variability in pricing. Through contingency and proportion tables, we explored the relationships between boat types and fuel types.
+
+Analyzing box plots of boat length by fuel type revealed that diesel-powered boats tended to be larger than those powered by other fuels. We also noted a positive, moderately strong, linear association between price and length, characterized by numerous outliers. These outliers may represent anomalies or data entry errors, but they could also reflect valid data points deserving of consideration.
+
+Our analysis suggests that longer boats generally command higher prices. Manufacturers such as Tracker, Sun Tracker, and Bennington were prominent in the market, offering competitively priced boats. Furthermore, new boats were more prevalent in the market compared to used ones. Powered boats fueled by diesel and gasoline appeared to offer favorable deals.
+
+A notable limitation of our study is the absence of customer feedback, including ratings and budget preferences across different demographics. Incorporating such feedback could provide valuable insights for future analyses.
