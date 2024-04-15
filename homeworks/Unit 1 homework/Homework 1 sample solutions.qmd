@@ -382,16 +382,114 @@ total.pax <- floor(max.wt / (70 + (z.score*11)))
 ### Q7: Relationship between variables (15 points)
 
 -   Make a scatterplot of `price` as a function of `length_ft`. Add a linear smoother to the plot and label any points you consider to be an outlier using `geom_text()` - the label for the outlier should print the observation's `id`. If necessary, transform any variables
-    1.  Do you think there is a clear pattern? Describe the association between `price` and `length_ft`.
-    2.  Find out the details of any outliers you have identified. Do you think the outlier(s) should be excluded from the analysis? Why or why not?
+
+```{r}
+#| label: fig-q7a
+#| fig-cap: "Price vs. length in feet"
+
+ggplot(boats, aes(x=length_ft, y=price)) + geom_point(alpha = 0.5, position = "jitter")+
+  geom_smooth(method = "lm", se = FALSE) +
+  geom_text(data=boats[boats$price>1000000 | boats$length>100 | boats$length < 4,], 
+            aes(label=id), size=3, vjust=2,color="red", check_overlap = TRUE) +
+  labs(title="Scatter plot of price vs length in feet", 
+       x="Length (ft)", y="Price")
+```
+> This relationship is a bit questionable as to whether to transform it. You should at least consider the issue of transformation and either using a lower order transformation of price or leaving it untransformed is ok as long as you state your reasons. The below is based on the un-transformed graph but if you transformed it you need to interpret your results thoughtfully also.
+
+1.  Do you think there is a clear pattern? Describe the association between `price` and `length_ft`.
+
+> There appears to be a positive linear relationship.
+>
+> -   Direction - Positive
+> -   Form - Somewhat linear, it appears, as length becomes longer, that price becomes more unstable.
+> -   Strength - Low to medium; there are many observations that do not fit the linear pattern at low values of length.
+> -   Outliers - There a few outliers that may be worth removing on further consideration.
+
+2.  Find out the details of any outliers you have identified. Do you think the outlier(s) should be excluded from the analysis? Why or why not?
+
+```{r}
+#| label: tbl-q7b
+#| tbl-cap: "Price vs. length in feet - outliers"
+
+price.length.outliers <- boats[boats$price>1000000 | boats$length>100, 
+                               c("id", "length_ft", "make", "model", "condition", "price")]
+
+kable(price.length.outliers,
+      col.names = c("ID", "Length (ft)", "Make", "Model", "Condition", "Price"),
+      row.names = FALSE)
+```
+
+> From this table, we can see that the two expensive boats are both a type of luxury boat and is in a new condition so it is not clear that it is an obvious outlier. The case of the SeaDoo is clearly a mistake in the data, this boat type is in reality much smaller. As we investigated in part 5, the cases with a very small length are also mistakes and should be excluded. 
+
 -   Make a second graph excluding any outliers you have identified
-    3.  What do you estimate the correlation to be, without using technology?
-    4.  Check the conditions for correlation
-    5.  Find and interpret the correlation coefficient for this relationship
-    6.  Interpret this graph. What is some useful information we could communicate to the client? What questions for additional investigation does this graph prompt for you?
+
+```{r}
+#| label: fig-q7c
+#| fig-cap: "Price vs. length in feet - no outlier"
+
+boats.no.outlier <- boats %>% 
+  filter(length_ft<100 & length_ft > 6)
+
+ggplot(boats.no.outlier, aes(x=length_ft, y=price)) + geom_point(alpha = 0.5, position = "jitter")+
+  geom_smooth(method = "lm", se = FALSE) +
+  labs(title="Scatter plot of price vs length in feet (outliers excluded)", 
+       x="Length (ft)", y="Price")
+```
+
+3.  What do you estimate the correlation to be, without using technology?
+
+> Any reasonable guess is ok here
+
+4.  Check the conditions for correlation
+
+> -   Quantitative variables condition: both are quantitative
+> -   Straight enough condition: the relationship is more or less straight
+> -   No outliers condition: there are a few outliers that cannot exclude, though probably will not result in a big change in the estimate.
+
+5.  Find and interpret the correlation coefficient for this relationship
+
+```{r}
+#| label: q7d
+#| echo: true
+
+cor(boats.no.outlier$price, boats.no.outlier$length_ft)
+```
+
+6.  Interpret this graph. What is some useful information we could communicate to the client? What questions for additional investigation does this graph prompt for you?
+
+> For length over a certain size, it appears a linear model may be hard to develop. Instead, maybe it is easier to focus on models with length less than 20 feet, as that appears to be the main type of boat and also has a clearer linear relationship. We may want to ask the boat dealer why this is the case. 
+
 -   Now, make a third graph of the same two variables but color it by `condition`. Add a linear smoother for each condition.
-    7.  How does this graphical display change your interpretation you developed in your answer to part 6? Why do you think you the relationship is structured like this? Explain.
+
+```{r}
+#| label: fig-q7d
+#| fig-cap: "Price vs. length in feet by condition"
+
+ggplot(boats.no.outlier, aes(x=length_ft, y=price, color=condition)) + 
+  geom_point(alpha = 0.5, position = "jitter") +
+  geom_smooth(method = "lm", se = FALSE) +
+  labs(title="Scatter plot of price vs length in feet by condition", 
+       x="Length (ft)", y="Price")
+```
+
+7.  How does this graphical display change your interpretation you developed in your answer to part 6? Why do you think you the relationship is structured like this? Explain.
+    
+> We can see more clearly that actually the relationship is different between new and used boats. It seems possible that larger, more expensive boats lose their value more quickly than smaller boats when sold as used. This may indicate to the dealer that they should be careful buying larger boats to resell. 
+
+> **Points of emphasis:**
+>
+> -   Good quality interpretation of the graphs
+> -   Graphs appropriately labeled
+> -   Careful consideration of the outliers
+> -   Use of the textbook definitions to describe relationships
+> -   Appropriate condition check for correlation
 
 ### Q8: Putting it all together (15 points)
 
 Through the analysis conducted in the previous section **and through at least one additional investigation of your own (which can be an additional graph or table, that analyzes a different relationship or distribution than one asked about in the questions above but you think is meaningful and important to communicate the client)**, write three paragraphs outlining what you think are the main findings of questions 1-7 plus your additional investigation. What would you recommend to your boss as to what types of boats sell for the most money? What information are we missing in this dataset that we would need to better understand boat price?
+
+> -   Analysis here can vary but must be at least two paragraphs
+> -   Should accurately summarize the information discovered by answering the previous questions
+> -   B-level answer will conduct a shallow additional analysis, A-level answer will show interesting additional analysis that builds on previous answers
+> -   Shows a good understanding of the limits of this dataset
+> -   Should be as precise as possible, don't use general statements when you can be more specific
