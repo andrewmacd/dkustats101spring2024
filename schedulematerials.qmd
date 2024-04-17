@@ -231,9 +231,9 @@ Topics covered:
 
 -   $p$ values and decisions -- how to make a decision
 
--   Lecture webpage: [Lecture 3.3]
+-   Lecture webpage: [Lecture 3.3](https://andrewm.shinyapps.io/spr2024hyptesting/)
 
--   Lecture activity: [Lecture 3.3 activity]
+-   Lecture activity: [Lecture 3.3 activity](activities/Lecture 3.3/lecture.3.3.activity.zip)
 
 ## Unit 3 homework - progress check (due Sunday, April 21 at 23:59:00)
 
