@@ -255,9 +255,9 @@ Topics covered:
 
 - Power of a test
 
--   Lecture webpage: [Lecture 3.4]
+-   Lecture webpage: [Lecture 3.4](https://andrewm.shinyapps.io/spr2024hyptestwisdom)
 
--   Lecture activity: [Lecture 3.4 activity]
+-   Lecture activity: [Lecture 3.4 activity](activities/Lecture 3.4/lecture.3.4.activity.zip)
 
 ## Lab 3.2: Sampling (Tueday, April 23)
 
