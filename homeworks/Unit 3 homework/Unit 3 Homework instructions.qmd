@@ -37,7 +37,7 @@ The dataset is courtesy of [Kannan Ravinther](https://www.kaggle.com/datasets/ka
 
 ***NOTE:*** For questions in this dataset, we are going to consider the police violence reports after May 25, 2020 as our sample. We are going to treat the entire dataset as the population. Make a subset of the data after George Floyd's death to get information you need for your sample and get the population information from the non-subsetted data. Even though we know the population SD, please treat the population SD as unknown and therefore you will need to rely on your sample SD.
 
-# Part 1: Up to Q2b - must submit for checking by Tuesday, February 22nd at 11:59 pm (except Q2c)
+# Part 1: Up to Q2b - must submit for checking by Sunday, April 21st at 11:59 pm (except Q2c)
 
 ## Q1: Literature review (5 points)
 
@@ -71,7 +71,7 @@ Another important question is whether the frequency of police violence changed a
 ### Q2c: Bootstrapping a confidence interval
 
 -   Using the existing data, create a 95% bootstrapped confidence interval for the number of deaths per month and show the code you used to create the bootstrapped confidence interval
--   Compare the results of the bootstrapped confidence interval (with 100000 samples) to the confidence interval you calculated by hand in Q2c - why were your results similar to or different than what you achieved by hand?
+-   Compare the results of the bootstrapped confidence interval (with 100000 samples) to the confidence interval you calculated by hand in Q2b - why were your results similar to or different than what you achieved by hand?
 -   Generally speaking, when would using the bootstrap method be helpful? When would the regular confidence interval be more useful?
 
 ## Q3: Hypothesis testing (30 points)
@@ -101,7 +101,7 @@ Now let's turn to comparing your sample to some hypotheses on the same issues.
 -   What are some possible lurking variables that might make our conclusion unreliable?
 -   What can you conclude about the police violence situation after the death of George Floyd?
 
-# Part 2: Finish by assigment deadline on Sunday, May 7 at 23:59 (all parts after this plus Q2c)
+# Part 2: Finish by assigment deadline on Sunday, April 28th at 23:59 (all parts after this plus Q2c)
 
 ## Q4: Hypothesis testing wisdom (25 points)
 
