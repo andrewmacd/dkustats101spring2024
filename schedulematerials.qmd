@@ -305,7 +305,7 @@ Topics covered:
 
 ## Lab 4.1: Model building (Tueday, April 30)
 
--   Lab files: [Lab 3.2]
+-   Lab cancelled
 
 ## Lecture 4.3: Interpretation activity (Thursday, May 2)
 
@@ -323,8 +323,8 @@ Topics covered:
 
 ## Unit 4 homework - paper analysis (due Sunday, May 5 at 23:59:00)
 
--   Homework files: [Unit 4 homework - paper analysis instructions]
+-   Homework files: [Unit 4 homework - paper analysis instructions](homeworks/Unit 4 homework - paper analysis/homework.4.paper.analysis.zip)
 
 ## Final project (due Wednesday, May 8 at 23:59:00)
 
--   Homework files:  [Final project instructions](homeworks/Final Project/final.project.zip)
+-   Homework files:  [Final project instructions]
