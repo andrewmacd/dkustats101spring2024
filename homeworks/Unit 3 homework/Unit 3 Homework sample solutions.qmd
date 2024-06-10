@@ -30,6 +30,7 @@ library(lubridate)
 library(zoo)
 
 set.seed(88888888)
+options(scipen=888888)
 
 # load(<filename>)
 police.deaths <- read.csv("police.deaths.csv")
@@ -216,7 +217,7 @@ ci <- xbar.deaths + (c(-moe, moe))
 
 > It would have to be **4** times larger. The size of the confidence interval decreases according to the square of the sample size.
 
-### Q3c: Bootstrapping a confidence interval
+### Q2c: Bootstrapping a confidence interval
 
 -   Using the existing data, create a 95% bootstrapped confidence interval for the number of deaths per month and show the code you used to create the bootstrapped confidence interval
 
@@ -288,10 +289,9 @@ n <- nrow(after.floyd)
 z <- (p-true.p)/sqrt(true.p*(1-true.p)/n)
 
 #calculate p-value
-p.value <- round(pnorm(z),4)
-
-p.value
+p.value <- round(pnorm(-abs(z))*2, 4)
 ```
+> $p=`r p.value`$
 
 > $p$ is very small, therefore we can reject the null hypothesis
 >
@@ -436,14 +436,14 @@ n.age <- sum(!is.na(after.floyd$age.numeric))
 t <- (af.mean.age - pop.mean.age)/
   (sd.age/sqrt(n.age))
 
-p.value.age = 1-pt(t, df=n.deaths-1)
-
-round(p.value.age, digits=4)
+p.value.age = 2*pt(-abs(t), df=n.age-1)
 ```
 
 > The test statistic is:
 >
-> $t=\frac{`r round(af.mean.age, 2)`-`r round(pop.mean.age)`}{\frac{`r round(sd.age, 2)`}{\sqrt{`r n.deaths`}}}=`r round(t, 2)`$
+> $t=\frac{`r round(af.mean.age, 2)`-`r round(pop.mean.age)`}{\frac{`r round(sd.age, 2)`}{\sqrt{`r n.age`}}}=`r round(t, 2)`$
+
+> $p=`r round(p.value.age, digits=4)`$
 
 ## Q5 Two sample $t$ and $z$ test (30 points)
 
@@ -482,7 +482,7 @@ est <- sqrt(p1*(1-p1)/n1+p2*(1-p2)/n2)
 
 z.state.comp <- (p1-p2)/est
 
-p.state.comp <- (pnorm(z.state.comp))*2
+p.state.comp <- (pnorm(-abs(z.state.comp))*2)
 
 round(p.state.comp, 4)
 ```
@@ -611,7 +611,7 @@ conf.int
 > -   Know when to use pooled variance.
 > -   Know how to deal with two sample $t$ and $z$ test.
 
-## Q7: Putting it all together (15 points)
+## Q6: Putting it all together (15 points)
 
 Through the analysis conducted in the previous section **and through at least one additional investigation of your own (an additional graph, table, or calculation)**, write at least two to three paragraphs outlining what you think are the main findings from Q1-Q5 and your own additional analysis. Based on these results, what policies or additional research would you recommend to the US senator? What information are we missing in this dataset that we would need to better understand the state of police violence in the US?
 
